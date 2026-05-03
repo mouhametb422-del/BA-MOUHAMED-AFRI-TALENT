@@ -1,0 +1,169 @@
+/* VARIABLES CSS */
+:root {
+    --couleur-primaire: #F5A623;
+    --couleur-secondaire: #1A1A2E;
+    --couleur-texte: #333333;
+    --couleur-fond: #FFFFFF;
+    --couleur-accent:#16213E;
+    --police-titre: 'Poppins', sans-serif;
+    --police-corps: 'Open Sans', sans-serif;
+    --espacement: 20px;
+
+}
+
+/* RESET ET BASE  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--police-corps);
+    color: var(--couleur-texte);
+    background-color: var(--couleur-fond);
+}
+
+/* TYPOGRAPHIE */
+h1, h2, h3, h4, h5 {
+    font-family: var(--police-titre);
+    color: var(--couleur-secondaire);
+}
+
+h1{ font-size: 3rem; }
+h2{ font-size: 2rem; }
+h3{ font-size: 1.5rem; }
+
+/* NAVBAR */
+nav{
+    background-color: var(--couleur-secondaire) ;
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--couleur-secondaire);
+    color: white;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+footer h5 {
+    color: var(--couleur-primaire);
+    margin-bottom: 15px;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer ul li {
+    margin-bottom: 8px;
+}
+
+/* HERO */
+#hero{
+    padding: 150px 20px 80px;
+    text-align: center;
+    background-color: var(--couleur-secondaire);
+    color: white;
+}
+
+#hero h1{
+    color: white;
+    font-size: 3.5rem;
+}
+
+#hero h2{
+    color: var(--couleur-primaire);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+/* STATS */
+.stats {
+    text-align: center;
+}
+
+.stat span{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--couleur-primaire);
+}
+
+/* SECTION */
+section {
+    padding: 80px 20px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* CARTES */
+.card{
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card:hover{
+    transform: translate(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* CATEGORIE */
+.categories {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.categories:hover {
+    background-color: var(--couleur-primaire);
+    color: white;
+    transform: translateY(-5px);
+}
+
+.categories img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* BOUTONS */
+.btn-warning {
+    background-color: var(--couleur-primaire);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+.btn-warning:hover {
+    background-color: #e09400;
+    color: white;
+}

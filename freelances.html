@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,218 @@
 
    <!-- Bootstrap 5 via CDN : feuillet de style -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
    <!-- votre feuille de style personnelle -->
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-   <!-- le continu de la page sera ajoute ici -->
+
+   <header>
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <img src="images/AfriTalent logo.jpeg" alt="logo" height="50px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+               aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                  <li class="nav-item"><a class="nav-link" href="freelances.html">Freelance</a></li>
+                  <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+               </ul>
+               <a href="#" class="btn btn-warning ms-3">Rejoindre AfriTalent</a>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <main>
+      <section id="filtres">
+         <h2>Nos Freelances</h2>
+         <button class="filtre" data-categorie="tous">Tous</button>
+         <button class="filtre" data-categorie="dev">Développement Web</button>
+         <button class="filtre" data-categorie="design">Design UI/UX</button>
+         <button class="filtre" data-categorie="marketing">Marketing Digital</button>
+         <button class="filtre" data-categorie="data">Data & IA</button>
+         <button class="filtre" data-categorie="redaction">Redaction Tech</button>
+         <button class="filtre" data-categorie="devops">Devops & Cloud</button>
+      </section>
+
+      <section id="profils">
+         <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="dev">
+               <img src="images/freelance1.jpg" alt="Photo de Ibrahima Sarr">
+               <h3>Ibrahima Sarr</h3>
+               <p>Développeur Web Full Stack</p>
+               <p>Expert en développement Web</p>
+               <p>25 000 FCFA/heure</p>
+               <p>⭐⭐⭐</p>
+               <a href="#" class="btn btn-warning">Voir le profil</a>
+            </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="design">
+                  <img src="images/freelance2.jpg" alt="Photo de Sokhna Aicha Fall">
+                  <h3>Sokhna Aicha Fall</h3>
+                  <p>Designer UI/UX</p>
+                  <p>Spécialiste en création de designs</p>
+                  <p>20 000 FCFA/heure</p>
+                  <p>⭐⭐⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning">Voir le profil</a>
+               </div>
+            </div>
+           
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="data">
+                  <img src="images/freelance3.jpg" alt="Photo de Gane Ndoye">
+                  <h3>Gane Ndoye</h3>
+                  <p>Data Scientist</p>
+                  <p>Expert Python et Statistique</p>
+                  <p>30 000 CFA/heure</p>
+                  <p>⭐⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning">Voir le profil</a>
+               </div>
+            </div>
+            
+
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="marketing">
+                  <img src="images/freelance4.jpg" alt="Photo de Aissatou Bah">
+                  <h3>Aissatou Bah</h3>
+                  <p>Marketing Digital</p>
+                  <p>Spécialiste SEO et réseau sociaux</p>
+                  <p>18 000 CFA/heure</p>
+                  <p>⭐⭐</p>
+                  <a href="#" class="btn btn-warning"> Voir le profil</a>
+               </div>
+            </div>
+
+           
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="devops">
+                  <img src="images/freelance5.jpg" alt="Photo de Mansour Dieng">
+                  <h3>Mansour Dieng</h3>
+                  <p>Devops & Cloud</p>
+                  <p>Spécialiste du cloud et des applications</p>
+                  <p>35 000 CFA/heure</p>
+                  <p>⭐⭐⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning">Voir le profil</a>
+               </div>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="redaction">
+                  <img src="images/freelance6.jpg" alt="Photo de Rokhaya Touré">
+                  <h3>Rokhaya Touré</h3>
+                  <p>Rédaction Tech</p>
+                  <p>Spécialiste en rédaction tech</p>
+                  <p>15 000 FCFA/heure</p>
+                  <p>⭐⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning">Voir le profil</a>
+               </div>
+            </div>
+            
+            
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="dev">
+                  <img src="images/freelance7.jpeg" alt="Photo de Adama Ndiaye">
+                  <h3>Adama Ndiaye</h3>
+                  <p>Développeur Mobile</p>
+                  <p>Développeur d'application mobiles</p>
+                  <p>28 000 FCA/heure</p>
+                  <p>⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning"> Voir le profil</a>
+               </div>
+            </div>
+            
+            
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="design">
+                  <img src="images/freelance8.jpg" alt="Photo de Mariata Ba">
+                  <h3>Mariata Ba</h3>
+                  <p>Designer Graphique</p>
+                  <p>Spécialiste en image de marque</p>
+                  <p>22 000CFA/heure</p>
+                  <p>⭐⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning">Voir le profil</a>
+               </div>
+            </div>
+            
+            
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="data">
+                  <img src="images/freelance9.jpeg" alt="Photo de Mouhamed Baldé">
+                  <h3>Mouhamed Baldé</h3>
+                  <p>Ingenieur IA</p>
+                  <p>Spécialiste en IA</p>
+                  <p>40 000CFA/heure</p>
+                  <p>⭐⭐⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning">Voir le profil</a>
+
+               </div>
+            </div>
+            
+            
+            
+         </div>
+          
+
+      </section>
+   </main>
+
+   <footer>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-3">
+               <h5>AfriTalent</h5>
+               <p>La plateforme de références pour les freelances tech en Afrique.</p>
+            </div>
+
+            <div class="col-md-3">
+               <h5>Liens utiles</h5>
+               <ul>
+                  <li><a href="index.html">Accueil</a></li>
+                  <li><a href="freelances.html">Freelances</a></li>
+                  <li><a href="tarifs.html">Tarifs</a></li>
+               </ul>
+            </div>
+
+            <div class="col-md-3">
+               <h5>Ressources</h5>
+               <ul>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Support</a></li>
+               </ul>
+            </div>
+
+            <div class="col-md-3">
+               <h5>Contact</h5>
+               <p><a href="mailto:contact@afritalent.com">contact@afritalent.com</a></p>
+               <p><a href="tel:+221770000000">+221 77 000 00 00</a></p>
+               <p>Dakar ,Sénégal</p>
+            </div>
+         </div>
+         <p class="text-center">© <span id="annee"></span> AfriTalent. Tous droits réservés</p>
+      </div>
+   </footer>
    <!-- Bootstrap 5 via CDN : script JavaScript -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
    <!-- votre script javaScript  -->
    <script src="js/main.js"></script>
 </body>
+
 </html>
