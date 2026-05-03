@@ -9,10 +9,153 @@
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
    <!-- votre feuille de style personnelle -->
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   <!-- le continu de la page sera ajoute ici -->
+   <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <img src="images/AfriTalent logo.jpeg" alt="logo" height="50px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+               aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                  <li class="nav-item"><a class="nav-link" href="freelances.html">Freelance</a></li>
+                  <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+               </ul>
+               <a href="#" class="btn btn-warning ms-3">Rejoindre AfriTalent</a>
+            </div>
+         </div>
+      </nav>
+   </header>
+   <main>
+      <section id="histoire">
+         <h2>Notre Histoire</h2>
+         <div>
+            <img src="images/histoire.jpeg" alt="Histoire d'AfriTalent">
+            <p>AfriTalent est une plateforme lancée en 2022 pour relier les talents tech africains aux entreprises du continent et faciliter l'accés au travail freelance pour tous les africains.</p>
+         </div>
+      </section>
+
+      <section id="equipe">
+         <h2>Notre Equipe</h2>
+         <div class="card">
+            <img src="images/equipe1.jpg" alt="Mamadou Diallo">
+            <h3>Mamadou Diallo</h3>
+            <p>CEO & Fondateur</p>
+            <a href="#">LinkedIn</a>
+         </div>
+
+         <div class="card">
+            <img src="images/equipe2.jpg" alt="Aissatou Sow">
+            <h3>Aissatou Sow</h3>
+            <p>Directrice Marketing</p>
+            <a href="#">LinkedIn</a>
+         </div>
+
+         <div class="card">
+            <img src="images/equipe3.jpeg" alt="Ibrahima Ba">
+            <h3>Ibrahima Ba</h3>
+            <p>Directeur Technique</p>
+            <a href="#">LinkedIn</a>
+         </div>
+
+         <div class="card">
+            <img src="images/equipe4.jpg" alt="Fatou Camara">
+            <h3>Fatou Camara</h3>
+            <p>Responsable Communauté</p>
+            <a href="#">LinkedIn</a>
+         </div>
+      </section>
+
+      <section id="valeurs">
+         <h2>Nos Valeurs</h2>
+         <div class="valeur">
+            <h3>🚀Innovation</h3>
+            <p>Nous cherchons constamment à améliorer l'expérience de nos utilisateurs.</p>
+         </div>
+
+        <div class="valeur">
+            <h3>🌍Accessibilité</h3>
+            <p>Nous voulons que chaque africain puisse accéder aux opportunités tech.</p>
+        </div>
+
+        <div class="valeur">
+            <h3>🤝Communauté</h3>
+            <p>Nous construisons une communauté forte de freelances et d'entreprises.</p>
+        </div>
+
+        <div class="valeur">
+            <h3>⭐Excellence</h3>
+            <p>Nous nous engageons à offrir le meilleur service possible.</p>
+        </div>
+      </section>
+
+      <section id="chiffres">
+         <h2>Nos Chiffres clés</h2>
+         <div class="chiffre">
+            <span class="compteur" data-target="2500">0</span>
+            <p>Freelances</p>
+         </div>
+
+         <div class="chiffre">
+            <span class="compteur" data-target="800">0</span>
+            <p>Entreprises</p>
+         </div>
+
+         <div class="chiffre">
+            <span class="compteur" data-target="1200">0</span>
+            <p>Missions réalisées</p>
+         </div>
+
+         <div class="chiffre">
+            <span class="compteur" data-target="15">0</span>
+            <p>Pays couverts</p>
+         </div>
+      </section>
+   </main>
+   <footer>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-3">
+               <h5>AfriTalent</h5>
+               <p>La plateforme de référence pour les freelances tech en Afrique.</p>
+            </div>
+            <div class="col-md-3">
+               <h5>Liens utiles</h5>
+               <ul>
+                  <li><a href="index.html">Accueil</a></li>
+                  <li><a href="freelances.html">Freelances</a></li>
+                  <li><a href="tarifs.html">Tarifs</a></li>
+               </ul>
+            </div>
+            <div class="col-md-3">
+               <h5>Ressources</h5>
+               <ul>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Support</a></li>
+               </ul>
+            </div>
+            <div class="col-md-3">
+               <h5>Contact</h5>
+               <p><a href="mailto:contact@afritalent.com">contact@afritalent.com</a></p>
+               <p><a href="tel:+221772000000">+221 77 200 00 00</a></p>
+               <p>Dakar, Sénégal</p>
+            </div>
+         </div>
+         <p class="text-center">©<span id="annee"></span>AfriTalent. Tous droits réservés.</p>
+      </div>
+   </footer>
+
    <!-- Bootstrap 5 via CDN : script JavaScript -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 

@@ -1,22 +1,205 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>AfriTalent - Acceuil</title>
+   <title>AfriTalent - Accueil</title>
 
    <!-- Bootstrap 5 via CDN : feuillet de style -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
    <!-- votre feuille de style personnelle -->
-   <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-   <!-- le continu de la page sera ajoute ici -->
+   <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <img src="images/AfriTalent logo.jpeg" alt="logo" height="50px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+               aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+               <ul class="navbar-nav ms-auto">
+                  <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                  <li class="nav-item"><a class="nav-link" href="freelances.html">Freelance</a></li>
+                  <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                  <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+               </ul>
+               <a href="#" class="btn btn-warning ms-3">Rejoindre AfriTalent</a>
+            </div>
+         </div>
+      </nav>
+   </header>
+
+   <main>
+      <section id="hero">
+         <h1>Trouvez les meilleurs talents tech en Afrique</h1>
+         <h2>AfriTalent connecte les freelances et les entreprises</h2>
+         <a href="freelances.html" class="btn btn-warning btn-lg fw-bold px-4">Je suis freelance</a>
+         <a href="freelances.html" class="btn btn-outline-dark btn-lg px-4">Je cherche un Freelance</a>
+
+         <div class="stats">
+            <div class="stat">
+               <span class="compteur" data-target="2500">0</span>
+               <p>Freelances</p>
+            </div>
+
+            <div class="stat">
+               <span class="compteur" data-target="800">0</span>
+               <p>Entreprises</p>
+            </div>
+
+            <div class="stat">
+               <span class="compteur" data-target="12000">0</span>
+               <p>Missions</p>
+            </div>
+         </div>
+      </section>
+
+      <section id="comment-ca-marche">
+         <h2>Comment ça marche ?</h2>
+         <div class="etape">
+            <span>1</span>
+            <h3>Créez votre profil</h3>
+            <p>Inscrivez-vous et présentez vos compétences en quelques minutes.</p>
+         </div>
+         <div class="etape">
+            <span>2</span>
+            <h3>Trouvez une mission.</h3>
+            <p>Parcourez les offres et postulez aux missions qui vous correspondent.</p>
+         </div>
+         <div class="etape">
+            <span>3</span>
+            <h3>Travaillez et soyez payé</h3>
+            <p>Réaliser la mission et recevez votre paiement en toute sécurité.</p>
+         </div>
+      </section>
+
+      <section id="catégorie">
+         <h2>Nos catégories de services</h2>
+
+         <div class="categories">
+            <img src="images/web-dev.png" alt="Développement Web">
+            <h3>Développement Web</h3>
+            <p>120 freelances disponibles</p>
+         </div>
+
+         <div class="categories">
+            <img src="images/Design.png" alt="Design UI/UX">
+            <h3>Design UI/UX</h3>
+            <p>85 freelances disponibles</p>
+         </div>
+
+         <div class="categories">
+            <img src="images/Marketing.png" alt="Marketing Digital">
+            <h3>Marketing Digital</h3>
+            <p>95 freelances disponibles</p>
+         </div>
+
+         <div class="categories">
+            <img src="images/IA.png" alt="Data & IA">
+            <h3>Data & IA</h3>
+            <p>60 freelances disponibles</p>
+         </div>
+
+         <div class="categories">
+            <img src="images/Tech.png" alt="Rédaction Tech">
+            <h3>Rédaction Tech</h3>
+            <p>45 freelances disponibles</p>
+         </div>
+
+         <div class="categories">
+            <img src="images/Cloud.png" alt="DevOps & Cloud">
+            <h3>DevOps & Cloud</h3>
+            <p>70 freelances disponibles</p>
+         </div>
+      </section>
+
+      <section id="temoignage">
+         <h2>ce que disent nos utilisateurs</h2>
+
+         <div class="temoignage">
+            <img src="images/Avatar1.jpg" alt="Photo de Oumou Thiane">
+            <h3>Oumou Thiane</h3>
+            <p>Freelance Développeur</p>
+            <p>"AfriTalent m'a permis de trouver des missions rapidement !"</p>
+            <p>⭐⭐⭐⭐⭐</p>
+         </div>
+
+         <div class="temoignage">
+            <img src="images/Avatar2.jpg" alt="Photo de Aminata Ba ">
+            <h3>Aminata Ba</h3>
+            <p>DG Sonatel</p>
+            <p>"Nous avons trouvé un excellent designer en 24 !"</p>
+            <p>⭐⭐⭐⭐</p>
+         </div>
+
+         <div class="temoignage">
+            <img src="images/Avatar3.jpg" alt="Photo de Moustapha Diop">
+            <h3>Moustapha Diop</h3>
+            <p>Freelance Designer</p>
+            <p>"La meilleure plateforme pour les freelances africains !"</p>
+            <p>⭐⭐⭐</p>
+         </div>
+      </section>
+
+      <section id="cta">
+         <h2>Prêt à rejoindre AfriTalent ?</h2>
+         <p>Rejoignez des milliers de freelances et entreprises qui nous font confiance</p>
+         <a href="contact.html" class="btn btn-warning fw-bold px-4">S'inscrire maintenant</a>
+      </section>
+   </main>
+   <footer>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-3">
+               <h5>AfriTalent</h5>
+               <p>La plateforme de références pour les freelances tech en Afrique.</p>
+            </div>
+
+            <div class="col-md-3">
+               <h5>Liens utiles</h5>
+               <ul>
+                  <li><a href="index.html">Accueil</a></li>
+                  <li><a href="freelances.html">Freelances</a></li>
+                  <li><a href="tarifs.html">Tarifs</a></li>
+               </ul>
+            </div>
+
+            <div class="col-md-3">
+               <h5>Ressources</h5>
+               <ul>
+                  <li><a href="#">Blog</a></li>
+                  <li><a href="#">FAQ</a></li>
+                  <li><a href="#">Support</a></li>
+               </ul>
+            </div>
+
+            <div class="col-md-3">
+               <h5>Contact</h5>
+               <p><a href="mailto:contact@afritalent.com">contact@afritalent.com</a></p>
+               <p><a href="tel:+221770000000">+221 77 000 00 00</a></p>
+               <p>Dakar ,Sénégal</p>
+            </div>
+         </div>
+         <p class="text-center">© <span id="annee"></span> AfriTalent. Tous droits réservés</p>
+      </div>
+   </footer>
+
    <!-- Bootstrap 5 via CDN : script JavaScript -->
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
    <!-- votre script javaScript  -->
    <script src="js/main.js"></script>
+
 </body>
+
 </html>
