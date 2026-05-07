@@ -8,6 +8,9 @@
 
    <!-- Bootstrap 5 via CDN : feuillet de style -->
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
    <!-- votre feuille de style personnelle -->
    <link rel="stylesheet" href="css/style.css">
@@ -16,7 +19,7 @@
 <body>
 
    <header>
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
          <div class="container">
             <a class="navbar-brand" href="index.html">
                <img src="images/AfriTalent logo.jpeg" alt="logo" height="50px">
@@ -53,96 +56,125 @@
       </section>
 
       <section id="profils">
-         <div class="card" data-categorie="dev">
-            <img src="images/freelance1.jpg" alt="Photo de Ibrahima Sarr">
-            <h3>Ibrahima Sarr</h3>
-            <p>Développeur Web Full Stack</p>
-            <p>Expert en développement Web</p>
-            <p>25 000 FCFA/heure</p>
-            <p>⭐⭐⭐</p>
-            <a href="#" class="btn btn-warning">Voir le profil</a>
-         </div>
+         <div class="row">
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="dev">
+               <img src="images/freelance1.jpg" alt="Photo de Ibrahima Sarr">
+               <h3>Ibrahima Sarr</h3>
+               <p>Développeur Web Full Stack</p>
+               <p>Expert en développement Web</p>
+               <p>25 000 FCFA/heure</p>
+               <p>⭐⭐⭐</p>
+               <a href="#" class="btn btn-warning">Voir le profil</a>
+            </div>
+            </div>
+            
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="design">
+                  <img src="images/freelance2.jpg" alt="Photo de Sokhna Aicha Fall">
+                  <h3>Sokhna Aicha Fall</h3>
+                  <p>Designer UI/UX</p>
+                  <p>Spécialiste en création de designs</p>
+                  <p>20 000 FCFA/heure</p>
+                  <p>⭐⭐⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning">Voir le profil</a>
+               </div>
+            </div>
+           
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="data">
+                  <img src="images/freelance3.jpg" alt="Photo de Gane Ndoye">
+                  <h3>Gane Ndoye</h3>
+                  <p>Data Scientist</p>
+                  <p>Expert Python et Statistique</p>
+                  <p>30 000 CFA/heure</p>
+                  <p>⭐⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning">Voir le profil</a>
+               </div>
+            </div>
+            
 
-         <div class="card" data-categorie="design">
-            <img src="images/freelance2.jpg" alt="Photo de Sokhna Aicha Fall">
-            <h3>Sokhna Aicha Fall</h3>
-            <p>Designer UI/UX</p>
-            <p>Spécialiste en création de designs</p>
-            <p>20 000 FCFA/heure</p>
-            <p>⭐⭐⭐⭐⭐</p>
-            <a href="#" class="btn btn-warning">Voir le profil</a>
-         </div>
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="marketing">
+                  <img src="images/freelance4.jpg" alt="Photo de Aissatou Bah">
+                  <h3>Aissatou Bah</h3>
+                  <p>Marketing Digital</p>
+                  <p>Spécialiste SEO et réseau sociaux</p>
+                  <p>18 000 CFA/heure</p>
+                  <p>⭐⭐</p>
+                  <a href="#" class="btn btn-warning"> Voir le profil</a>
+               </div>
+            </div>
 
-         <div class="card" data-categorie="data">
-            <img src="images/freelance3.jpg" alt="Photo de Gane Ndoye">
-            <h3>Gane Ndoye</h3>
-            <p>Data Scientist</p>
-            <p>Expert Python et Statistique</p>
-            <p>30 000 CFA/heure</p>
-            <p>⭐⭐⭐⭐</p>
-            <a href="#" class="btn btn-warning">Voir le profil</a>
-         </div>
+           
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="devops">
+                  <img src="images/freelance5.jpg" alt="Photo de Mansour Dieng">
+                  <h3>Mansour Dieng</h3>
+                  <p>Devops & Cloud</p>
+                  <p>Spécialiste du cloud et des applications</p>
+                  <p>35 000 CFA/heure</p>
+                  <p>⭐⭐⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning">Voir le profil</a>
+               </div>
+            </div>
 
-         <div class="card" data-categorie="marketing">
-            <img src="images/freelance4.jpg" alt="Photo de Aissatou Bah">
-            <h3>Aissatou Bah</h3>
-            <p>Marketing Digital</p>
-            <p>Spécialiste SEO et réseau sociaux</p>
-            <p>18 000 CFA/heure</p>
-            <p>⭐⭐</p>
-            <a href="#" class="btn btn-warning"> Voir le profil</a>
-         </div>
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="redaction">
+                  <img src="images/freelance6.jpg" alt="Photo de Rokhaya Touré">
+                  <h3>Rokhaya Touré</h3>
+                  <p>Rédaction Tech</p>
+                  <p>Spécialiste en rédaction tech</p>
+                  <p>15 000 FCFA/heure</p>
+                  <p>⭐⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning">Voir le profil</a>
+               </div>
+            </div>
+            
+            
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="dev">
+                  <img src="images/freelance7.jpeg" alt="Photo de Adama Ndiaye">
+                  <h3>Adama Ndiaye</h3>
+                  <p>Développeur Mobile</p>
+                  <p>Développeur d'application mobiles</p>
+                  <p>28 000 FCA/heure</p>
+                  <p>⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning"> Voir le profil</a>
+               </div>
+            </div>
+            
+            
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="design">
+                  <img src="images/freelance8.jpg" alt="Photo de Mariata Ba">
+                  <h3>Mariata Ba</h3>
+                  <p>Designer Graphique</p>
+                  <p>Spécialiste en image de marque</p>
+                  <p>22 000CFA/heure</p>
+                  <p>⭐⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning">Voir le profil</a>
+               </div>
+            </div>
+            
+            
+            <div class="col-lg-4 col-md-6 col-12">
+               <div class="card" data-categorie="data">
+                  <img src="images/freelance9.jpeg" alt="Photo de Mouhamed Baldé">
+                  <h3>Mouhamed Baldé</h3>
+                  <p>Ingenieur IA</p>
+                  <p>Spécialiste en IA</p>
+                  <p>40 000CFA/heure</p>
+                  <p>⭐⭐⭐⭐⭐</p>
+                  <a href="#" class="btn btn-warning">Voir le profil</a>
 
-         <div class="card" data-categorie="devops">
-            <img src="images/freelance5.jpg" alt="Photo de Mansour Dieng">
-            <h3>Mansour Dieng</h3>
-            <p>Devops & Cloud</p>
-            <p>Spécialiste du cloud et des applications</p>
-            <p>35 000 CFA/heure</p>
-            <p>⭐⭐⭐⭐⭐</p>
-            <a href="#" class="btn btn-warning">Voir le profil</a>
+               </div>
+            </div>
+            
+            
+            
          </div>
-
-         <div class="card" data-categorie="redaction">
-            <img src="images/freelance6.jpg" alt="Photo de Rokhaya Touré">
-            <h3>Rokhaya Touré</h3>
-            <p>Rédaction Tech</p>
-            <p>Spécialiste en rédaction tech</p>
-            <p>15 000 FCFA/heure</p>
-            <p>⭐⭐⭐⭐</p>
-            <a href="#" class="btn btn-warning">Voir le profil</a>
-         </div>
-
-         <div class="card" data-categorie="dev">
-            <img src="images/freelance7.jpeg" alt="Photo de Adama Ndiaye">
-            <h3>Adama Ndiaye</h3>
-            <p>Développeur Mobile</p>
-            <p>Développeur d'application mobiles</p>
-            <p>28 000 FCA/heure</p>
-            <p>⭐⭐⭐</p>
-            <a href="#" class="btn btn-warning"> Voir le profil</a>
-         </div>
-
-         <div class="card" data-categorie="design">
-            <img src="images/freelance8.jpg" alt="Photo de Mariata Ba">
-            <h3>Mariata Ba</h3>
-            <p>Designer Graphique</p>
-            <p>Spécialiste en image de marque</p>
-            <p>22 000CFA/heure</p>
-            <p>⭐⭐⭐⭐</p>
-            <a href="#" class="btn btn-warning">Voir le profil</a>
-         </div>
-
-         <div class="card" data-categorie="data">
-            <img src="images/freelance9.jpeg" alt="Photo de Mouhamed Baldé">
-            <h3>Mouhamed Baldé</h3>
-            <p>Ingenieur IA</p>
-            <p>Spécialiste en IA</p>
-            <p>40 000CFA/heure</p>
-            <p>⭐⭐⭐⭐⭐</p>
-            <a href="#" class="btn btn-warning">Voir le profil</a>
-
-         </div>
+          
 
       </section>
    </main>
