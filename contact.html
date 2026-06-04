@@ -41,57 +41,85 @@
 
    <main>
       <section id="contact">
-         <h2>Contactez-nous</h2>
+         <div class="container">
+            <h2>Contactez-nous</h2>
+            <div class="row">
+               <div class="contact-wrapper">
+                  <form id="formulaireContact">
+                     <div>
+                        <label for="nom">Nom</label>
+                        <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                        <span class="erreur" id="erreurNom"></span>
+                     </div>
 
-         <div>
-            <form id="formulaireContact">
-               <div>
-                  <label for="nom">Nom</label>
-                  <input type="text" id="nom" name="nom" placeholder="Votre nom">
-                  <span class="erreur" id="erreurNom"></span>
+                     <div>
+                        <label for="Prenom">Prénom</label>
+                        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+                        <span class="erreur" id="erreurPrenom"></span>
+                     </div>
+
+                     <div>
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Votre email">
+                        <span class="erreur" id="erreurEmail"></span>
+                     </div>
+
+                     <div>
+                        <label for="sujet">Sujet</label>
+                        <select id="sujet" name="sujet">
+                           <option value="">--Choisir un sujet--</option>
+                           <option value="info">Demande d'information</option>
+                           <option value="support">Support technique</option>
+                           <option value="partenariat">Partenariat</option>
+                           <option value="autre">Autre</option>
+                        </select>
+                        <span class="erreur" id="erreurSujet"></span>
+                     </div>
+
+                     <div>
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Votre message (minimum 20 caractéres)"></textarea>
+                        <span class="erreur" id="erreurMessage"></span>
+                     </div>
+
+                     <button type="submit" class="btn btn-warning">Envoyer</button>
+                     <div id="messageSuccess"></div>
+                  </form>
+                  
+               
+
+                  <div class="col-lg-4 col-md-12 col-12">
+                     <div class="coordonnees">
+                        <h3>Nos coordonnées</h3>
+                        <p class="email">
+                           <span class="icon-box">📧</span>
+                           <span class="info">
+                              <span class="label">Email</span>
+                              <a href="mailto:contact@afritalent.com">contact@afritalent.com</a>
+                           </span>
+                           
+                        </p>
+
+                        <p class="phone">
+                           <span class="icon-box">📞</span>
+                           <span class="info">
+                              <span class="label">Téléphone</span>
+                              <a href="tel:+221772000000">+221 77 200 00 00</a>
+                           </span>
+                        </p>
+                        <p class="address">
+                           <span class="icon-box">📍</span>
+                           <span class="info">
+                              <span class="label">adresse</span>
+                              <span class="value">Dakar,Sénégal</span>
+                           </span>
+
+                        </p>
+                     </div>
+                  </div>
                </div>
-
-               <div>
-                  <label for="Prenom">Prénom</label>
-                  <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
-                  <span class="erreur" id="erreurPrenom"></span>
-               </div>
-
-               <div>
-                  <label for="email">Email</label>
-                  <input type="text" id="email" name="email" placeholder="Votre email">
-                  <span class="erreur" id="erreurEmail"></span>
-               </div>
-
-               <div>
-                  <label for="sujet">Sujet</label>
-                  <select id="sujet" name="sujet">
-                     <option value="">--Choisir un sujet--</option>
-                     <option value="info">Demande d'information</option>
-                     <option value="support">Support technique</option>
-                     <option value="partenariat">Partenariat</option>
-                     <option value="autre">Autre</option>
-                  </select>
-                  <span class="erreur" id="erreurSujet"></span>
-               </div>
-
-               <div>
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" placeholder="Votre message (minimum 20 caractéres)"></textarea>
-                  <span class="erreur" id="erreurMessage"></span>
-               </div>
-
-               <button type="submit" class="btn btn-warning">Envoyer</button>
-               <div id="messageSuccess"></div>
-            </form>
-         </div>
-
-         <div>
-            <h3>Nos coordonnées</h3>
-            <p>📧<a href="mailto:contact@afritalent.com">contact@afritalent.com</a></p>
-            <p>📞<a href="tel:+221772000000">+221 77 200 00 00</a></p>
-            <p>📍 Dakar,Sénégal</p>
-
+            </div>
+            
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123488.88707642847!2d-17.465825!3d14.711024450000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f5b3c5bb71%3A0xb17c17d92d5db21f!2sDakar!5e0!3m2!1sfr!2ssn!4v1777816733667!5m2!1sfr!2ssn"
                width="100%"
                height="300"
@@ -100,7 +128,8 @@
                loading="lazy"
                title="Localisation AfriTalent">     
             </iframe>
-         </div>
+            
+         </div>   
       </section>
    </main>
 

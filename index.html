@@ -79,21 +79,25 @@
 
       <section id="comment-ca-marche">
          <h2>Comment ça marche ?</h2>
-         <div class="etape">
-            <span>1</span>
-            <h3>Créez votre profil</h3>
-            <p>Inscrivez-vous et présentez vos compétences en quelques minutes.</p>
+         <div class="bento-grid">
+
+            <div class="bento-item bento-large">
+               <span class="numero">1</span>
+               <h3>Créez votre profil</h3>
+               <p>Inscrivez-vous et présentez vos compétences en quelques minutes.</p>
+            </div>
+            <div class="bento-item">
+               <span class="numero">2</span>
+               <h3>Trouvez une mission.</h3>
+               <p>Parcourez les offres et postulez aux missions qui vous correspondent.</p>
+            </div>
+            <div class="bento-item">
+               <span class="numero">3</span>
+               <h3>Travaillez et soyez payé</h3>
+               <p>Réaliser la mission et recevez votre paiement en toute sécurité.</p>
+            </div>
          </div>
-         <div class="etape">
-            <span>2</span>
-            <h3>Trouvez une mission.</h3>
-            <p>Parcourez les offres et postulez aux missions qui vous correspondent.</p>
-         </div>
-         <div class="etape">
-            <span>3</span>
-            <h3>Travaillez et soyez payé</h3>
-            <p>Réaliser la mission et recevez votre paiement en toute sécurité.</p>
-         </div>
+         
       </section>
 
       <section id="catégorie">
@@ -138,31 +142,51 @@
       </section>
 
       <section id="temoignage">
-         <h2>ce que disent nos utilisateurs</h2>
+         <div class="container">
+            <h2>Ce que disent nos utilisateurs</h2>
+            <div id="carouselTemoignage" class="carousel slide" data-bs-ride="carousel">
 
-         <div class="temoignage">
-            <img src="images/Avatar1.jpg" alt="Photo de Oumou Thiane">
-            <h3>Oumou Thiane</h3>
-            <p>Freelance Développeur</p>
-            <p>"AfriTalent m'a permis de trouver des missions rapidement !"</p>
-            <p>⭐⭐⭐⭐⭐</p>
-         </div>
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="temoignage text-center">
+                        <img src="images/Avatar1.jpg" alt="Photo de Oumou Thiane">
+                        <h3>Oumou Thiane</h3>
+                        <p>Freelance Développeur</p>
+                        <p>"AfriTalent m'a permis de trouver des missions rapidement !"</p>
+                        <p>⭐⭐⭐⭐⭐</p>
+                     </div>
+                  </div>
 
-         <div class="temoignage">
-            <img src="images/Avatar2.jpg" alt="Photo de Aminata Ba ">
-            <h3>Aminata Ba</h3>
-            <p>DG Sonatel</p>
-            <p>"Nous avons trouvé un excellent designer en 24 !"</p>
-            <p>⭐⭐⭐⭐</p>
-         </div>
+                  <div class="carousel-item">
+                     <div class="temoignage text-center">
+                        <img src="images/Avatar2.jpg" alt="Photo de Aminata Ba ">
+                        <h3>Aminata Ba</h3>
+                        <p>DG Sonatel</p>
+                        <p>"Nous avons trouvé un excellent designer en 24 !"</p>
+                        <p>⭐⭐⭐⭐</p>
+                     </div>
+                  </div>
 
-         <div class="temoignage">
-            <img src="images/Avatar3.jpg" alt="Photo de Moustapha Diop">
-            <h3>Moustapha Diop</h3>
-            <p>Freelance Designer</p>
-            <p>"La meilleure plateforme pour les freelances africains !"</p>
-            <p>⭐⭐⭐</p>
-         </div>
+                  <div class="carousel-item">
+                     <div class="temoignage text-center">
+                        <img src="images/Avatar3.jpg" alt="Photo de Moustapha Diop">
+                        <h3>Moustapha Diop</h3>
+                        <p>Freelance Designer</p>
+                        <p>"La meilleure plateforme pour les freelances africains !"</p>
+                        <p>⭐⭐⭐</p>
+                     </div>
+                  </div>
+               </div>   
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselTemoignage" data-bs-slide="prev">
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Précédent</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselTemoignage" data-bs-slide="next">
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="visually-hidden">Suivant</span>
+                  </button>
+            </div>
+         </div>  
       </section>
 
       <section id="cta">

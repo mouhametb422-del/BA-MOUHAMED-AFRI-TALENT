@@ -14,7 +14,7 @@
 /* RESET ET BASE  */
 *{
     margin: 0;
-    padding: 0; 
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -69,3 +69,235 @@ footer ul {
 footer ul li {
     margin-bottom: 8px;
 }
+footer {
+    margin-top: 0;
+}
+
+/* HERO DISPOSITION */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.hero-texte {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-image {
+    flex: 1;
+    text-align: right;
+    position: relative;
+    margin-right: -40px;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+}
+
+/* section */
+section h2{
+    text-align: center;
+    margin-bottom: 50px;
+}
+#hero h2{
+    text-align: left;
+    margin-top: 30px;
+}
+
+/* FOND */
+#hero{
+    background-image: url('../images/AfriqueTech.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+/* TEXTE ET IMEGE DEVANT LE FOND */
+#hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* FLEX GAUCHE/DROITE  */
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* TEXTES BLANCS */
+#hero h1 { color: #fff; font-size: 3rem; font-weight: 800;}
+#hero h2 { color: #aaa; font-size: 1.1rem; font-weight: 400;}
+.text-orange {color: #f5a623;}
+
+/* IMAGE */
+.hero-image img {
+    width: 100%;
+    border-radius: 18px;
+    /* Fusionne l'image avec le fond sombre */
+    mix-blend-mode: luminosity;
+    /* Efface les bords progressivement */
+    mask-image: radial-gradient(ellipse 80% 80% at 55% 45%,black 30%, transparent 80% );
+}
+
+/* STATS */
+.stat span { color: #f5a623; font-size: 1.8rem; font-weight: 800;}
+.stat p { color: #aaa;}
+.stats{
+    display: flex;
+    gap: 3rem;
+    margin-left: 2rem;
+    text-align: center;   
+}
+
+
+/* TYPOGRAPHIE EXPRESSIVE HERO */
+#hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+#hero h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* BENTO GRID COMMENT CA MARCHE */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+#comment-ca-marche {
+    padding: 80px 20px;
+} 
+.bento-item {
+    background-color: var(--couleur-secondaire);
+    color: white;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.bento-large {
+    grid-column: 1;
+    grid-row: 1;
+}
+.bento-item:last-child {
+    grid-column: 3;
+    grid-row: 1;
+}
+
+.bento-item:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+
+}
+
+.numero {
+    font-size: 3rem;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    color: var(--couleur-primaire);
+}
+
+.bento-item h3 {
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* CATEGORIES HOVER */
+.categories {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+}
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    width: 100%;
+}
+
+#categorie {
+    padding: 80px 20px;
+}
+.categories:hover {
+    background-color: var(--couleur-primaire);
+    transform: translateY(-5px);
+}
+
+.categories:hover h3 {
+    color: white;
+}
+
+.categories:hover p {
+    color: white;
+}
+
+.categories img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+/* CAROUSEL TEMOIGNAGES */
+.carousel {
+    background-color: var(--couleur-secondaire);
+    padding: 50px;
+    border-radius: 15px;
+}
+
+.temoignage {
+    text-align: center;
+    color: white;
+}
+
+.temoignage img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.temoignage h3 {
+    color: var(--couleur-primaire);
+}
+
+.temoignage p {
+    color: white;
+    font-style: italic;
+}
+
+/* CTA */
+#cta {
+    text-align: center;
+    background-color: var(--couleur-primaire);
+    color: white;
+    padding: 80px 20px;
+}
+#cta h2 {
+    color: white;
+}
+#cta p {
+    color: white;
+    margin-bottom: 30px;
+}
+
+
+
