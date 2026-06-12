@@ -1,176 +1,183 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>AfriTalent - A propos</title>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>AfriTalent - A propos</title>
 
-   <!-- Bootstrap 5 via CDN : feuillet de style -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <!-- Bootstrap 5 via CDN : feuillet de style -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-   <!-- votre feuille de style personnelle -->
-   <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-   <header>
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-         <div class="container">
-            <a class="navbar-brand" href="index.html">
-               <img src="images/AfriTalent logo.jpeg" alt="logo" height="50px">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-               aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-               <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                  <li class="nav-item"><a class="nav-link" href="freelances.html">Freelance</a></li>
-                  <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
-                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-               </ul>
-               <a href="#" class="btn btn-warning ms-3">Rejoindre AfriTalent</a>
+      <!-- votre feuille de style personnelle -->
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <!-- Bouton Retour en haut -->
+   <button id="btn-top" title="Retour en haut">
+      ⇧
+   </button>
+   <body>
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+               <a class="navbar-brand" href="index.html">
+                  <img src="images/AfriTalent logo.jpeg" alt="logo" height="50px">
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                  aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navMenu">
+                  <ul class="navbar-nav ms-auto">
+                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                     <li class="nav-item"><a class="nav-link" href="freelances.html">Freelance</a></li>
+                     <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                     <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                  </ul>
+                  <!-- Toggle Dark Mode -->
+                  <button id="theme-toggle" class="btn btn-white rounded-circle">
+                     🌙
+                  </button>
+                  <a href="#" class="btn btn-warning ms-3">Rejoindre AfriTalent</a>
+               </div>
             </div>
-         </div>
-      </nav>
-   </header>
-   <main>
-      <section id="histoire">
-         <h2>Notre Histoire</h2>
-         <div>
-            <img src="images/histoire.jpeg" alt="Histoire d'AfriTalent">
-            <p>AfriTalent est une plateforme lancée en 2022 pour relier les talents tech africains aux entreprises du continent et faciliter l'accés au travail freelance pour tous les africains.</p>
-         </div>
-      </section>
+         </nav>
+      </header>
+      <main>
+         <section id="histoire">
+            <h2>Notre Histoire</h2>
+            <div>
+               <img src="images/histoire.jpeg" alt="Histoire d'AfriTalent">
+               <p>AfriTalent est une plateforme lancée en 2022 pour relier les talents tech africains aux entreprises du continent et faciliter l'accés au travail freelance pour tous les africains.</p>
+            </div>
+         </section>
 
-      <section id="equipe">
-         <h2>Notre Equipe</h2> 
-         <div class="row">
+         <section id="equipe">
+            <h2>Notre Equipe</h2> 
+            <div class="row">
+               <div class="col-md-6">
+                  <div class="card">
+                     <img src="images/equipe1.jpg" alt="Mamadou Diallo">
+                     <h3>Mamadou Diallo</h3>
+                     <p>CEO & Fondateur</p>
+                     <a href="#"class="btn btn-warning">LinkedIn</a>
+                  </div>
+               </div>
+
             <div class="col-md-6">
                <div class="card">
-                  <img src="images/equipe1.jpg" alt="Mamadou Diallo">
-                  <h3>Mamadou Diallo</h3>
-                  <p>CEO & Fondateur</p>
-                  <a href="#"class="btn btn-warning">LinkedIn</a>
+                  <img src="images/equipe2.jpg" alt="Aissatou Sow">
+                  <h3>Aissatou Sow</h3>
+                  <p>Directrice Marketing</p>
+                  <a href="#" class="btn btn-warning">LinkedIn</a>
                </div>
             </div>
 
-         <div class="col-md-6">
-            <div class="card">
-               <img src="images/equipe2.jpg" alt="Aissatou Sow">
-               <h3>Aissatou Sow</h3>
-               <p>Directrice Marketing</p>
-               <a href="#" class="btn btn-warning">LinkedIn</a>
+            <div class="col-md-6">
+               <div class="card">
+                  <img src="images/equipe3.jpeg" alt="Ibrahima Ba">
+                  <h3>Ibrahima Ba</h3>
+                  <p>Directeur Technique</p>
+                  <a href="#" class="btn btn-warning">LinkedIn</a>
+               </div>
             </div>
-         </div>
 
-         <div class="col-md-6">
-            <div class="card">
-               <img src="images/equipe3.jpeg" alt="Ibrahima Ba">
-               <h3>Ibrahima Ba</h3>
-               <p>Directeur Technique</p>
-               <a href="#" class="btn btn-warning">LinkedIn</a>
+            <div class="col-md-6">
+               <div class="card">
+                  <img src="images/equipe4.jpg" alt="Fatou Camara">
+                  <h3>Fatou Camara</h3>
+                  <p>Responsable Communauté</p>
+                  <a href="#" class="btn btn-warning">LinkedIn</a>
+               </div>
             </div>
-         </div>
+         </section>
 
-         <div class="col-md-6">
-            <div class="card">
-               <img src="images/equipe4.jpg" alt="Fatou Camara">
-               <h3>Fatou Camara</h3>
-               <p>Responsable Communauté</p>
-               <a href="#" class="btn btn-warning">LinkedIn</a>
+         <section id="valeurs">
+            <h2>Nos Valeurs</h2>
+            <div class="valeur">
+               <h3>🚀Innovation</h3>
+               <p>Nous cherchons constamment à améliorer l'expérience de nos utilisateurs.</p>
             </div>
-         </div>
-      </section>
 
-      <section id="valeurs">
-         <h2>Nos Valeurs</h2>
          <div class="valeur">
-            <h3>🚀Innovation</h3>
-            <p>Nous cherchons constamment à améliorer l'expérience de nos utilisateurs.</p>
+               <h3>🌍Accessibilité</h3>
+               <p>Nous voulons que chaque africain puisse accéder aux opportunités tech.</p>
          </div>
 
-        <div class="valeur">
-            <h3>🌍Accessibilité</h3>
-            <p>Nous voulons que chaque africain puisse accéder aux opportunités tech.</p>
-        </div>
-
-        <div class="valeur">
-            <h3>🤝Communauté</h3>
-            <p>Nous construisons une communauté forte de freelances et d'entreprises.</p>
-        </div>
-
-        <div class="valeur">
-            <h3>⭐Excellence</h3>
-            <p>Nous nous engageons à offrir le meilleur service possible.</p>
-        </div>
-      </section>
-
-      <section id="chiffres">
-         <h2>Nos Chiffres clés</h2>
-         <div class="chiffre">
-            <span class="compteur" data-target="2500">0</span>
-            <p>Freelances</p>
+         <div class="valeur">
+               <h3>🤝Communauté</h3>
+               <p>Nous construisons une communauté forte de freelances et d'entreprises.</p>
          </div>
 
-         <div class="chiffre">
-            <span class="compteur" data-target="800">0</span>
-            <p>Entreprises</p>
+         <div class="valeur">
+               <h3>⭐Excellence</h3>
+               <p>Nous nous engageons à offrir le meilleur service possible.</p>
          </div>
+         </section>
 
-         <div class="chiffre">
-            <span class="compteur" data-target="1200">0</span>
-            <p>Missions réalisées</p>
-         </div>
-
-         <div class="chiffre">
-            <span class="compteur" data-target="15">0</span>
-            <p>Pays couverts</p>
-         </div>
-      </section>
-   </main>
-   <footer>
-      <div class="container">
-         <div class="row">
-            <div class="col-md-3">
-               <h5>AfriTalent</h5>
-               <p>La plateforme de référence pour les freelances tech en Afrique.</p>
+         <section id="chiffres">
+            <h2>Nos Chiffres clés</h2>
+            <div class="chiffre">
+               <span class="compteur" data-target="2500">0</span>
+               <p>Freelances</p>
             </div>
-            <div class="col-md-3">
-               <h5>Liens utiles</h5>
-               <ul>
-                  <li><a href="index.html">Accueil</a></li>
-                  <li><a href="freelances.html">Freelances</a></li>
-                  <li><a href="tarifs.html">Tarifs</a></li>
-               </ul>
+
+            <div class="chiffre">
+               <span class="compteur" data-target="800">0</span>
+               <p>Entreprises</p>
             </div>
-            <div class="col-md-3">
-               <h5>Ressources</h5>
-               <ul>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Support</a></li>
-               </ul>
+
+            <div class="chiffre">
+               <span class="compteur" data-target="1200">0</span>
+               <p>Missions réalisées</p>
             </div>
-            <div class="col-md-3">
-               <h5>Contact</h5>
-               <p><a href="mailto:contact@afritalent.com">contact@afritalent.com</a></p>
-               <p><a href="tel:+221772000000">+221 77 200 00 00</a></p>
-               <p>Dakar, Sénégal</p>
+
+            <div class="chiffre">
+               <span class="compteur" data-target="15">0</span>
+               <p>Pays couverts</p>
             </div>
+         </section>
+      </main>
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3">
+                  <h5>AfriTalent</h5>
+                  <p>La plateforme de référence pour les freelances tech en Afrique.</p>
+               </div>
+               <div class="col-md-3">
+                  <h5>Liens utiles</h5>
+                  <ul>
+                     <li><a href="index.html">Accueil</a></li>
+                     <li><a href="freelances.html">Freelances</a></li>
+                     <li><a href="tarifs.html">Tarifs</a></li>
+                  </ul>
+               </div>
+               <div class="col-md-3">
+                  <h5>Ressources</h5>
+                  <ul>
+                     <li><a href="#">Blog</a></li>
+                     <li><a href="#">FAQ</a></li>
+                     <li><a href="#">Support</a></li>
+                  </ul>
+               </div>
+               <div class="col-md-3">
+                  <h5>Contact</h5>
+                  <p><a href="mailto:contact@afritalent.com">contact@afritalent.com</a></p>
+                  <p><a href="tel:+221772000000">+221 77 200 00 00</a></p>
+                  <p>Dakar, Sénégal</p>
+               </div>
+            </div>
+            <p class="text-center">©<span id="annee"></span>AfriTalent. Tous droits réservés.</p>
          </div>
-         <p class="text-center">©<span id="annee"></span>AfriTalent. Tous droits réservés.</p>
-      </div>
-   </footer>
+      </footer>
 
-   <!-- Bootstrap 5 via CDN : script JavaScript -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Bootstrap 5 via CDN : script JavaScript -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-   <!-- votre script javaScript  -->
-   <script src="js/main.js"></script>
-</body>
+      <!-- votre script javaScript  -->
+      <script src="js/main.js"></script>
+   </body>
 </html>

@@ -1,176 +1,183 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>AfriTalent - Contact</title>
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>AfriTalent - Contact</title>
 
-   <!-- Bootstrap 5 via CDN : feuillet de style -->
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+      <!-- Bootstrap 5 via CDN : feuillet de style -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-   <!-- votre feuille de style personnelle -->
-   <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-   <header>
-      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-         <div class="container">
-            <a class="navbar-brand" href="index.html">
-               <img src="images/AfriTalent logo.jpeg" alt="logo" height="50px">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
-               aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-               <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-               <ul class="navbar-nav ms-auto">
-                  <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                  <li class="nav-item"><a class="nav-link" href="freelances.html">Freelance</a></li>
-                  <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
-                  <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
-                  <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-                  <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-               </ul>
-               <a href="#" class="btn btn-warning ms-3">Rejoindre AfriTalent</a>
+      <!-- votre feuille de style personnelle -->
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <!-- Bouton Retour en haut -->
+   <button id="btn-top" title="Retour en haut">
+      ⇧
+   </button>
+   <body>
+      <header>
+         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+               <a class="navbar-brand" href="index.html">
+                  <img src="images/AfriTalent logo.jpeg" alt="logo" height="50px">
+               </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                  aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navMenu">
+                  <ul class="navbar-nav ms-auto">
+                     <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+                     <li class="nav-item"><a class="nav-link" href="freelances.html">Freelance</a></li>
+                     <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                     <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                  </ul>
+                  <!-- Toggle Dark Mode -->
+                  <button id="theme-toggle" class="btn btn-white rounded-circle">
+                     🌙
+                  </button>
+                  <a href="#" class="btn btn-warning ms-3">Rejoindre AfriTalent</a>
+               </div>
             </div>
-         </div>
-      </nav>
-   </header>
+         </nav>
+      </header>
 
-   <main>
-      <section id="contact">
-         <div class="container">
-            <h2>Contactez-nous</h2>
-            <div class="row">
-               <div class="contact-wrapper">
-                  <form id="formulaireContact">
-                     <div>
-                        <label for="nom">Nom</label>
-                        <input type="text" id="nom" name="nom" placeholder="Votre nom">
-                        <span class="erreur" id="erreurNom"></span>
-                     </div>
+      <main>
+         <section id="contact">
+            <div class="container">
+               <h2>Contactez-nous</h2>
+               <div class="row">
+                  <div class="contact-wrapper">
+                     <form id="formulaireContact">
+                        <div>
+                           <label for="nom">Nom</label>
+                           <input type="text" id="nom" name="nom" placeholder="Votre nom">
+                           <span class="erreur" id="erreurNom"></span>
+                        </div>
 
-                     <div>
-                        <label for="Prenom">Prénom</label>
-                        <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
-                        <span class="erreur" id="erreurPrenom"></span>
-                     </div>
+                        <div>
+                           <label for="Prenom">Prénom</label>
+                           <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
+                           <span class="erreur" id="erreurPrenom"></span>
+                        </div>
 
-                     <div>
-                        <label for="email">Email</label>
-                        <input type="text" id="email" name="email" placeholder="Votre email">
-                        <span class="erreur" id="erreurEmail"></span>
-                     </div>
+                        <div>
+                           <label for="email">Email</label>
+                           <input type="text" id="email" name="email" placeholder="Votre email">
+                           <span class="erreur" id="erreurEmail"></span>
+                        </div>
 
-                     <div>
-                        <label for="sujet">Sujet</label>
-                        <select id="sujet" name="sujet">
-                           <option value="">--Choisir un sujet--</option>
-                           <option value="info">Demande d'information</option>
-                           <option value="support">Support technique</option>
-                           <option value="partenariat">Partenariat</option>
-                           <option value="autre">Autre</option>
-                        </select>
-                        <span class="erreur" id="erreurSujet"></span>
-                     </div>
+                        <div>
+                           <label for="sujet">Sujet</label>
+                           <select id="sujet" name="sujet">
+                              <option value="">--Choisir un sujet--</option>
+                              <option value="info">Demande d'information</option>
+                              <option value="support">Support technique</option>
+                              <option value="partenariat">Partenariat</option>
+                              <option value="autre">Autre</option>
+                           </select>
+                           <span class="erreur" id="erreurSujet"></span>
+                        </div>
 
-                     <div>
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" placeholder="Votre message (minimum 20 caractéres)"></textarea>
-                        <span class="erreur" id="erreurMessage"></span>
-                     </div>
+                        <div>
+                           <label for="message">Message</label>
+                           <textarea id="message" name="message" placeholder="Votre message (minimum 20 caractéres)"></textarea>
+                           <span class="erreur" id="erreurMessage"></span>
+                        </div>
 
-                     <button type="submit" class="btn btn-warning">Envoyer</button>
-                     <div id="messageSuccess"></div>
-                  </form>
+                        <button type="submit" class="btn btn-warning">Envoyer</button>
+                        <div id="messageSuccess"></div>
+                     </form>
+                     
                   
-               
 
-                  <div class="col-lg-4 col-md-12 col-12">
-                     <div class="coordonnees">
-                        <h3>Nos coordonnées</h3>
-                        <p class="email">
-                           <span class="icon-box">📧</span>
-                           <span class="info">
-                              <span class="label">Email</span>
-                              <a href="mailto:contact@afritalent.com">contact@afritalent.com</a>
-                           </span>
-                           
-                        </p>
+                     <div class="col-lg-4 col-md-12 col-12">
+                        <div class="coordonnees">
+                           <h3>Nos coordonnées</h3>
+                           <p class="email">
+                              <span class="icon-box">📧</span>
+                              <span class="info">
+                                 <span class="label">Email</span>
+                                 <a href="mailto:contact@afritalent.com">contact@afritalent.com</a>
+                              </span>
+                              
+                           </p>
 
-                        <p class="phone">
-                           <span class="icon-box">📞</span>
-                           <span class="info">
-                              <span class="label">Téléphone</span>
-                              <a href="tel:+221772000000">+221 77 200 00 00</a>
-                           </span>
-                        </p>
-                        <p class="address">
-                           <span class="icon-box">📍</span>
-                           <span class="info">
-                              <span class="label">adresse</span>
-                              <span class="value">Dakar,Sénégal</span>
-                           </span>
+                           <p class="phone">
+                              <span class="icon-box">📞</span>
+                              <span class="info">
+                                 <span class="label">Téléphone</span>
+                                 <a href="tel:+221772000000">+221 77 200 00 00</a>
+                              </span>
+                           </p>
+                           <p class="address">
+                              <span class="icon-box">📍</span>
+                              <span class="info">
+                                 <span class="label">adresse</span>
+                                 <span class="value">Dakar,Sénégal</span>
+                              </span>
 
-                        </p>
+                           </p>
+                        </div>
                      </div>
                   </div>
                </div>
-            </div>
-            
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123488.88707642847!2d-17.465825!3d14.711024450000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f5b3c5bb71%3A0xb17c17d92d5db21f!2sDakar!5e0!3m2!1sfr!2ssn!4v1777816733667!5m2!1sfr!2ssn"
-               width="100%"
-               height="300"
-               style="border: 0;"
-               allowfullscreen=""
-               loading="lazy"
-               title="Localisation AfriTalent">     
-            </iframe>
-            
-         </div>   
-      </section>
-   </main>
+               
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d123488.88707642847!2d-17.465825!3d14.711024450000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec172f5b3c5bb71%3A0xb17c17d92d5db21f!2sDakar!5e0!3m2!1sfr!2ssn!4v1777816733667!5m2!1sfr!2ssn"
+                  width="100%"
+                  height="300"
+                  style="border: 0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  title="Localisation AfriTalent">     
+               </iframe>
+               
+            </div>   
+         </section>
+      </main>
 
-   <footer>
-      <div class="container">
-         <div class="row">
-            <div class="col-md-3">
-               <h5>AfriTalent</h5>
-               <p>La plateforme de référence pour les freelances tech en Afrique.</p>
+      <footer>
+         <div class="container">
+            <div class="row">
+               <div class="col-md-3">
+                  <h5>AfriTalent</h5>
+                  <p>La plateforme de référence pour les freelances tech en Afrique.</p>
+               </div>
+               <div class="col-md-3">
+                  <h5>Liens utiles</h5>
+                  <ul>
+                     <li><a href="index.html">Accueil</a></li>
+                     <li><a href="freelances.html">Freelances</a></li>
+                     <li><a href="tarifs.html">Tarifs</a></li>
+                  </ul>
+               </div>
+               <div class="col-md-3">
+                  <h5>Ressources</h5>
+                  <ul>
+                     <li><a href="#">Blog</a></li>
+                     <li><a href="#">FAQ</a></li>
+                     <li><a href="#">Support</a></li>
+                  </ul>
+               </div>
+               <div class="col-md-3">
+                  <h5>Contact</h5>
+                  <p><a href="mailto:contact@afritalent.com">contact@afritalent.com</a></p>
+                  <p><a href="tel:+221772000000">+221 77 200 00 00</a></p>
+                  <p>Dakar, Sénégal</p>
+               </div>
             </div>
-            <div class="col-md-3">
-               <h5>Liens utiles</h5>
-               <ul>
-                  <li><a href="index.html">Accueil</a></li>
-                  <li><a href="freelances.html">Freelances</a></li>
-                  <li><a href="tarifs.html">Tarifs</a></li>
-               </ul>
-            </div>
-            <div class="col-md-3">
-               <h5>Ressources</h5>
-               <ul>
-                  <li><a href="#">Blog</a></li>
-                  <li><a href="#">FAQ</a></li>
-                  <li><a href="#">Support</a></li>
-               </ul>
-            </div>
-            <div class="col-md-3">
-               <h5>Contact</h5>
-               <p><a href="mailto:contact@afritalent.com">contact@afritalent.com</a></p>
-               <p><a href="tel:+221772000000">+221 77 200 00 00</a></p>
-               <p>Dakar, Sénégal</p>
-            </div>
+            <p class="text-center">©<span id="annee"></span>AfriTalent. Tous droits réservés.</p>
          </div>
-         <p class="text-center">©<span id="annee"></span>AfriTalent. Tous droits réservés.</p>
-      </div>
-   </footer>
+      </footer>
 
-   <!-- Bootstrap 5 via CDN : script JavaScript -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <!-- Bootstrap 5 via CDN : script JavaScript -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-   <!-- votre script javaScript  -->
-   <script src="js/main.js"></script>
-</body>
+      <!-- votre script javaScript  -->
+      <script src="js/main.js"></script>
+   </body>
 </html>

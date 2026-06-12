@@ -360,9 +360,6 @@ section h2{
 }
 
 /* TARIF */
-/* #tarifs .card {
-    height: 100%;
-} */
 #tarifs .btn {
     margin-top: auto;
 }
@@ -1052,5 +1049,77 @@ iframe {
         } 
     }
 
+    /* Commit 6
+    DARK MODE */
 
+    body.dark-mode {
+        background-color: #121212;
+        color: white;
+    }
+
+    body.dark-mode h1,
+    body.dark-mode h2,
+    body.dark-mode h3,
+    body.dark-mode P,
+    body.dark-mode li,
+    body.dark-mode div,
+    body.dark-mode label {
+        color: white;
+    }
+
+    /* Conserver les couleurs des valeurs */
+    body.dark-mode .valeur h3 {
+        color: var(--couleur-primaire);
+    }
+    /* Conserver les couleurs des temoignages */
+    body.dark-mode .temoignage h3 {
+        color: var(--couleur-primaire);
+    }
+    body.dark-mode .card,
+    body.dark-mode .valeur,
+    body.dark-mode .coordonnees,
+    body.dark-mode #formulaireContact,
+    body.dark-mode #histoire div,
+    body.dark-mode .bento-item,
+    body.dark-mode .accordion-body {
+        background-color: #1f1f1f;
+    }
+
+    body.dark-mode #histoire p {
+        color: white;
+    }
+
+    body.dark-mode #filtres,
+    body.dark-mode #histoire {
+        background-color: #181818;
+    }
+
+    /* NAVBAR DYNAMIQUE */
+    .navbar {
+        transition: all 0.3s ease;
+    }
+    .navbar-scroll {
+        background-color: rgba(26, 26, 46, 0.95) !important;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    /* RETOUR TOP */
+
+    #btn-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        height: 50px;
+        border: none;
+        border-radius: 50%;
+        background-color: var(--couleur-primaire);
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    #btn-top:hover {
+        transform: scale(1.1);
+    }
 
