@@ -1123,3 +1123,16 @@ iframe {
         transform: scale(1.1);
     }
 
+    /* COMMIT 7
+    Fade In des sections */
+
+    .fade-in {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease;
+    }
+    .fade-in.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+

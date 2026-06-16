@@ -60,3 +60,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
+// COMMIT 7
+// COMPTEUR ANIMES
+
+const compteurs = document.querySelectorAll(".compteur");
+const observerCompteurs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const compteur = entry.target;
+            const cible = Number(compteur.dataset.target);
+
+            let valeur = 0;
+
+            const increment = cible / 100;
+            const animation = setInterval(()=> {
+                valeur+= increment;
+                if(valeur >= cible) {
+
+                    compteur.textContent = cible;
+                    clearInterval(animation);
+                } else{
+                    compteur.textContent = Math.floor(valeur);
+                }
+            }, 20);
+            observerCompteurs.unobserve(compteur);
+        }
+    });
+}, { threshold: 0.5});
+compteurs.forEach(compteur => {
+    observerCompteurs.observe(compteur);
+});
+
+// FADE IN DES SECTIONS
+
+const sections = document.querySelectorAll("section");
+sections.forEach(section => {
+    section.classList.add("fade-in");
+});
+const observeSections = new IntersectionObserver((entries)=> {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+}, {threshold:0.2});
+sections.forEach(section => {
+    observeSections.observe(section);
+});
