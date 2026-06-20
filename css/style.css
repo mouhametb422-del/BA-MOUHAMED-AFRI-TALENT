@@ -1136,3 +1136,20 @@ iframe {
         transform: translateY(0);
     }
 
+
+    /* COMMIT 8 */
+    .erreur {
+        color: red;
+        font-size: 0.9rem;
+        display: block;
+        margin-top: -15px;
+        margin-bottom: 10px;
+    }
+
+    #messageSuccess {
+        color: lightgreen;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 15px;
+    }
+

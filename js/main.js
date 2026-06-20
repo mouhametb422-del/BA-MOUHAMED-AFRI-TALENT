@@ -107,3 +107,100 @@ const observeSections = new IntersectionObserver((entries)=> {
 sections.forEach(section => {
     observeSections.observe(section);
 });
+
+
+// COMMIT 8
+// Filtrage des freelances
+// Validation du formulaire
+document.addEventListener("DOMContentLoaded", () =>{
+
+    // FILTRAGE DES FREELANCES
+
+    const filtres = document.querySelectorAll(".filtre");
+    const cartes = document.querySelectorAll("#profils .card");
+
+    filtres.forEach(filtre => {
+        filtre.addEventListener("click", () => {
+            const categorie = filtre.dataset.categorie;
+            cartes.forEach(carte => {
+
+                if (
+                    categorie === "tous" ||
+                    carte.dataset.categorie === categorie
+                ) {
+                    carte.parentElement.style.display = "block";
+                } else {
+                    carte.parentElement.style.display = "none";
+                }
+            });
+        });
+    });
+});
+
+// VALIDATION FORMULAIRE
+
+const formulaire = document.getElementById("formulaireContact");
+if (formulaire) {
+
+    formulaire.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let valide = true;
+
+        const nom = document.getElementById("nom");
+        const prenom = document.getElementById("prenom");
+        const email = document.getElementById("email");
+        const sujet = document.getElementById("sujet");
+        const message = document.getElementById("message");
+
+        const erreurNom = document.getElementById("erreurNom");
+        const erreurPrenom = document.getElementById("erreurPrenom");
+        const erreurEmail = document.getElementById("erreurEmail");
+        const erreurSujet = document.getElementById("erreurSujet");
+        const erreurMessage = document.getElementById("erreurMessage");
+
+        const messageSuccess =
+        document.getElementById("messageSuccess");
+
+        erreurNom.textContent = "";
+        erreurPrenom.textContent = "";
+        erreurEmail.textContent = "";
+        erreurSujet.textContent = "";
+        erreurMessage.textContent = "";
+        messageSuccess.textContent = "";
+
+        if (nom.value.trim() === "") {
+            erreurNom.textContent =
+            "Veuillez entrer votre nom";
+            valide = false;
+        }
+        if (prenom.value.trim() === "") {
+            erreurPrenom.textContent =
+            "Veuillez entrer votre prenom";
+            valide = false;
+        }
+        const regexEmail = 
+        /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!regexEmail.test(email.value.trim())) {
+            erreurEmail.textContent =
+            "Email invalide";
+            valide = false;
+        }
+        if(sujet.value === "") {
+            erreurSujet.textContent =
+            "Veuillez choisir un sujet";
+            valide = false;
+        }
+        if(message.value.trim().length < 20) {
+            erreurMessage.textContent =
+            "minimum 20 caractères";
+            valide = false;
+        }
+        if (valide) {
+            messageSuccess.textContent = 
+            "Message envoyé avec succés !";
+
+            formulaire.reset();
+        }
+    });
+}
