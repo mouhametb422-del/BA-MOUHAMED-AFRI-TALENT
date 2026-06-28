@@ -6,23 +6,24 @@
       <title>AfriTalent - Contact</title>
 
       <!-- Bootstrap 5 via CDN : feuillet de style -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
       <!-- votre feuille de style personnelle -->
       <link rel="stylesheet" href="css/style.css">
    </head>
+   <body>
    <!-- Bouton Retour en haut -->
    <button id="btn-top" title="Retour en haut">
       ⇧
    </button>
-   <body>
       <header>
          <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
                <a class="navbar-brand" href="index.html">
-                  <img src="images/AfriTalent logo.jpeg" alt="logo" height="50px">
+                  <img src="images/AfriTalent logo.jpeg" alt="logo AfriTalent" height="50">
                </a>
                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
                   aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,16 +32,16 @@
                <div class="collapse navbar-collapse" id="navMenu">
                   <ul class="navbar-nav ms-auto">
                      <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
-                     <li class="nav-item"><a class="nav-link" href="freelances.html">Freelance</a></li>
+                     <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
                      <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
                      <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
                      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                   </ul>
                   <!-- Toggle Dark Mode -->
-                  <button id="theme-toggle" class="btn btn-white rounded-circle">
+                  <button id="theme-toggle" class="btn rounded-circle">
                      🌙
                   </button>
-                  <a href="#" class="btn btn-warning ms-3">Rejoindre AfriTalent</a>
+                  <a href="contact.html" class="btn btn-warning ms-3">Rejoindre AfriTalent</a>
                </div>
             </div>
          </nav>
@@ -60,14 +61,14 @@
                         </div>
 
                         <div>
-                           <label for="Prenom">Prénom</label>
+                           <label for="prenom">Prénom</label>
                            <input type="text" id="prenom" name="prenom" placeholder="Votre prénom">
                            <span class="erreur" id="erreurPrenom"></span>
                         </div>
 
                         <div>
                            <label for="email">Email</label>
-                           <input type="text" id="email" name="email" placeholder="Votre email">
+                           <input type="email" id="email" name="email" placeholder="Votre email">
                            <span class="erreur" id="erreurEmail"></span>
                         </div>
 
@@ -85,7 +86,7 @@
 
                         <div>
                            <label for="message">Message</label>
-                           <textarea id="message" name="message" placeholder="Votre message (minimum 20 caractéres)"></textarea>
+                           <textarea id="message" name="message" placeholder="Votre message (minimum 20 caractères)"></textarea>
                            <span class="erreur" id="erreurMessage"></span>
                         </div>
 
@@ -114,13 +115,13 @@
                                  <a href="tel:+221772000000">+221 77 200 00 00</a>
                               </span>
                            </p>
+
                            <p class="address">
                               <span class="icon-box">📍</span>
                               <span class="info">
-                                 <span class="label">adresse</span>
-                                 <span class="value">Dakar,Sénégal</span>
+                                 <span class="label">Adresse</span>
+                                 <span class="value">Dakar, Sénégal</span>
                               </span>
-
                            </p>
                         </div>
                      </div>
@@ -169,8 +170,24 @@
                   <p><a href="tel:+221772000000">+221 77 200 00 00</a></p>
                   <p>Dakar, Sénégal</p>
                </div>
+               <!-- Réseaux sociaux -->
+               <h5>Suivez-nous</h5>
+               <div class="socials-links">
+                  <a href="https://www.facebook.com/share/1BC58p3h5S/?mibextid=wwXIfr" target="_blank">
+                     <img src="images/Facebook-logo.jpeg" alt="Facebook" width="40">
+                  </a>
+                  <a href="https://www.instagram.com/afritalents?igsh=MTgwMTkwMWZ4cTNweQ==" target="_blank">
+                     <img src="images/Instagram-logo.jpeg" alt="Instagram" width="40">
+                  </a>
+                  <a href="https://x.com/bbmjean?s=21" target="_blank">
+                     <img src="images/X-logo.jpeg" alt="X" width="40">
+                  </a>
+                  <a href="https://www.linkedin.com/company/afritalent-academy/" target="_blank">
+                     <img src="images/Linkedin-logo.jpeg" alt="LinkedIn" width="40">
+                  </a>
+               </div>
             </div>
-            <p class="text-center">©<span id="annee"></span>AfriTalent. Tous droits réservés.</p>
+            <p class="text-center">© <span id="annee"></span>AfriTalent. Tous droits réservés.</p>
          </div>
       </footer>
 

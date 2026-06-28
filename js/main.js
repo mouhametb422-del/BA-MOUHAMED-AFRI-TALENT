@@ -4,7 +4,7 @@
 // Bouton Retour en haut
 document.addEventListener("DOMContentLoaded", () => {
 
-    // DARK MODE + lOCALSTRAGE
+    // DARK MODE + LOCALSTORAGE
     const body = document.body;
     const toggleBtn = document.getElementById("theme-toggle");
 
@@ -103,7 +103,7 @@ const observeSections = new IntersectionObserver((entries)=> {
             entry.target.classList.add("visible");
         }
     });
-}, {threshold:0.2});
+}, {threshold:0});
 sections.forEach(section => {
     observeSections.observe(section);
 });
@@ -151,7 +151,6 @@ if (formulaire) {
         const email = document.getElementById("email");
         const sujet = document.getElementById("sujet");
         const message = document.getElementById("message");
-
         const erreurNom = document.getElementById("erreurNom");
         const erreurPrenom = document.getElementById("erreurPrenom");
         const erreurEmail = document.getElementById("erreurEmail");
@@ -175,7 +174,7 @@ if (formulaire) {
         }
         if (prenom.value.trim() === "") {
             erreurPrenom.textContent =
-            "Veuillez entrer votre prenom";
+            "Veuillez entrer votre prénom";
             valide = false;
         }
         const regexEmail = 
@@ -198,7 +197,7 @@ if (formulaire) {
         }
         if (valide) {
             messageSuccess.textContent = 
-            "Message envoyé avec succés !";
+            "Message envoyé avec succès !";
 
             formulaire.reset();
         }
