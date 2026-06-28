@@ -4,7 +4,7 @@
     --couleur-secondaire: #1A1A2E;
     --couleur-texte: #333333;
     --couleur-fond: #FFFFFF;
-    --couleur-accent:#16213E;
+    --couleur-accent: #16213E;
     --police-titre: 'Poppins', sans-serif;
     --police-corps: 'Open Sans', sans-serif;
     --espacement: 20px;
@@ -12,31 +12,39 @@
 }
 
 /* RESET ET BASE  */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: var(--police-corps);
     color: var(--couleur-texte);
     background-color: var(--couleur-fond);
 }
 
 /* TYPOGRAPHIE */
-h1, h2, h3, h4, h5 {
+h1,h2,h3,h4,h5 {
     font-family: var(--police-titre);
     color: var(--couleur-secondaire);
 }
 
-h1{ font-size: 3rem; }
-h2{ font-size: 2rem; }
-h3{ font-size: 1.5rem; }
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
 
 /* NAVBAR */
-nav{
-    background-color: var(--couleur-secondaire) ;
+nav {
+    background-color: var(--couleur-secondaire);
 }
 
 .navbar-brand img {
@@ -48,7 +56,7 @@ footer {
     background-color: var(--couleur-secondaire);
     color: white;
     padding: 40px 0;
-    margin-top: 50px;
+    margin-top: 0;
 }
 
 footer h5 {
@@ -69,8 +77,26 @@ footer ul {
 footer ul li {
     margin-bottom: 8px;
 }
-footer {
-    margin-top: 0;
+
+/* RESEAUX SOCIAUX IMAGE */
+.socials-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 1rem;
+
+}
+
+.socials-links a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.socials-links a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(245, 158, 11, 0.4);
 }
 
 /* HERO DISPOSITION */
@@ -78,7 +104,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 40px;
+    gap: 60px;
 }
 
 .hero-texte {
@@ -93,24 +119,23 @@ footer {
     margin-right: -40px;
 }
 
-.hero-image img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 20px;
-}
-
 /* section */
-section h2{
+section h2 {
     text-align: center;
     margin-bottom: 50px;
 }
-#hero h2{
+
+#hero h2 {
     text-align: left;
     margin-top: 30px;
+    color: white;
+}
+#hero h1{
+    color: white;
 }
 
 /* FOND */
-#hero{
+#hero {
     background-image: url('../images/AfriqueTech.jpeg');
     background-size: cover;
     background-position: center;
@@ -120,42 +145,44 @@ section h2{
     overflow: hidden;
 }
 
-/* TEXTE ET IMEGE DEVANT LE FOND */
+/* TEXTE ET IMAGE DEVANT LE FOND */
 #hero .container {
     position: relative;
     z-index: 1;
 }
 
-/* FLEX GAUCHE/DROITE  */
-.hero-content {
-    display: flex;
-    align-items: center;
-    gap: 60px;
+.text-orange {
+    color: #f5a623;
 }
-
-/* TEXTES BLANCS */
-#hero h1 { color: #fff; font-size: 3rem; font-weight: 800;}
-#hero h2 { color: #aaa; font-size: 1.1rem; font-weight: 400;}
-.text-orange {color: #f5a623;}
 
 /* IMAGE */
 .hero-image img {
     width: 100%;
-    border-radius: 18px;
+    max-width: 500px;
+    border-radius: 20px;
     /* Fusionne l'image avec le fond sombre */
     mix-blend-mode: luminosity;
     /* Efface les bords progressivement */
-    mask-image: radial-gradient(ellipse 80% 80% at 55% 45%,black 30%, transparent 80% );
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 55% 45%, black 30%, transparent 80%);
+    mask-image: radial-gradient(ellipse 80% 80% at 55% 45%, black 30%, transparent 80%);
 }
 
 /* STATS */
-.stat span { color: #f5a623; font-size: 1.8rem; font-weight: 800;}
-.stat p { color: #aaa;}
-.stats{
+.stat span {
+    color: #f5a623;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.stat p {
+    color: #aaa;
+}
+
+.stats {
     display: flex;
     gap: 3rem;
     margin-left: 2rem;
-    text-align: center;   
+    text-align: center;
 }
 
 
@@ -172,37 +199,37 @@ section h2{
 }
 
 /* BENTO GRID COMMENT CA MARCHE */
-.bento-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
 #comment-ca-marche {
     padding: 80px 20px;
-} 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bento-grid {
+    display: grid;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    grid-template-columns: 1fr 1.8fr;
+}
 .bento-item {
     background-color: var(--couleur-secondaire);
     color: white;
     padding: 30px;
     border-radius: 15px;
 }
-
 .bento-large {
     grid-column: 1;
-    grid-row: 1;
+    grid-row: 1/3;
 }
-.bento-item:last-child {
-    grid-column: 3;
-    grid-row: 1;
-}
-
 .bento-item:nth-child(2) {
     grid-column: 2;
     grid-row: 1;
-
 }
-
+.bento-item:nth-child(3) {
+    grid-column: 2;
+    grid-row: 2;
+}
 .numero {
     font-size: 3rem;
     font-weight: bold;
@@ -226,16 +253,18 @@ section h2{
     transition: all 0.3s ease;
     margin-bottom: 20px;
 }
+
 .categories-grid {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     width: 100%;
 }
 
-#categorie {
+.categories {
     padding: 80px 20px;
 }
+
 .categories:hover {
     background-color: var(--couleur-primaire);
     transform: translateY(-5px);
@@ -291,13 +320,16 @@ section h2{
     color: white;
     padding: 80px 20px;
 }
+
 #cta h2 {
     color: white;
 }
+
 #cta p {
     color: white;
     margin-bottom: 30px;
 }
+
 /* CSS FREELANCE */
 #filtres {
     text-align: center;
@@ -305,6 +337,7 @@ section h2{
     background-color: #f8f8f8;
     padding-top: 100px;
 }
+
 .filtre {
     background-color: var(--couleur-secondaire);
     border: 2px solid var(--couleur-primaire);
@@ -316,6 +349,7 @@ section h2{
     transition: all 0.3s ease;
     font-weight: bold;
 }
+
 .filtre:hover {
     background-color: var(--couleur-primaire);
     color: white;
@@ -325,20 +359,21 @@ section h2{
 .card {
     border: none;
     border-radius: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
     padding: 20px;
     margin-bottom: 10px;
     background-color: var(--couleur-secondaire);
     text-align: center;
 }
+
 .card:first-child {
     margin-left: 10px;
     margin-right: 10px;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(245, 158, 11, 0.4);
 }
 
 .card img {
@@ -346,15 +381,17 @@ section h2{
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 10px;
     margin: auto;
 }
+
 .card p {
     color: white;
 }
+
 .card h3 {
     color: white;
 }
+
 .card li {
     color: white;
 }
@@ -363,42 +400,51 @@ section h2{
 #tarifs .btn {
     margin-top: auto;
 }
+
 #tarifs h2 {
     margin-top: 100px;
 }
+
 #tarifs h3 {
     text-align: center;
 }
+
 #tarifs p {
     text-align: center;
 }
+
 #tarifs li {
     text-align: left;
 }
+
 #plan-pro {
-    padding-top: 45px; 
+    padding-top: 45px;
 }
 
 /* FAQ */
 #faq {
     padding: 80px 20px;
 }
+
 /* FAQ ACCORDION */
 .accordion-item {
     border: 1px solid #eee;
     margin-bottom: 10px;
     border-radius: 10px;
 }
+
 .accordion-button {
     background-color: white;
     color: var(--couleur-secondaire);
     font-weight: bold;
-    border-radius: 10px;   
+    border-radius: 10px;
 }
+
 .accordion-button:not(.collapsed) {
     background-color: var(--couleur-primaire);
     color: white;
 }
+
 .accordion-body {
     background-color: #f8f8f8;
     border-radius: 0 0 10px 10px;
@@ -410,6 +456,7 @@ section h2{
     background-color: #f8f8f8;
     padding-top: 100px;
 }
+
 #histoire div {
     display: flex;
     gap: 40px;
@@ -419,11 +466,13 @@ section h2{
     border-radius: 20px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
 #histoire p {
     font-size: 1.2rem;
     line-height: 1.8;
     color: var(--couleur-texte);
 }
+
 #histoire img {
     width: 400px;
     height: 300px;
@@ -434,14 +483,15 @@ section h2{
 #equipe .card img {
     width: 80px;
     height: 80px;
-    margin-bottom: 10px;   
-    border-radius: 50%;    
+    margin-bottom: 10px;
+    border-radius: 50%;
 }
 
 /* VALEURS */
 #valeurs {
     padding: 80px 20px;
 }
+
 .valeur {
     text-align: center;
     padding: 30px;
@@ -450,8 +500,9 @@ section h2{
     margin-bottom: 15px;
     border: 1px solid #eee;
     transition: all 0.3s ease, box-shadow 0.3s ease;
-    color: white;   
+    color: white;
 }
+
 .valeur h3 {
     margin-top: 20px;
     color: var(--couleur-primaire);
@@ -461,20 +512,23 @@ section h2{
 #chiffres {
     padding: 80px 20px;
     background-color: var(--couleur-primaire);
-   color: var(--couleur-accent);
-   text-align: center;
-   border-radius: 15px;
+    color: var(--couleur-accent);
+    text-align: center;
+    border-radius: 15px;
 }
+
 #chiffres h2 {
     color: var(--couleur-accent);
 }
+
 .chiffre {
     display: inline-block;
-    margin:20px 40px;
+    margin: 20px 40px;
 }
+
 .chiffre span {
     font-size: 3rem;
-    font-weight: bold;   
+    font-weight: bold;
 }
 
 /* CONTACT */
@@ -482,18 +536,21 @@ section h2{
     padding: 80px 20px;
     padding-top: 100px;
 }
+
 .contact-wrapper {
     display: flex;
-    gap: 60px;  
+    gap: 60px;
     max-width: 1100px;
     margin: 0 auto;
 
 }
+
 /* iframe */
 iframe {
-    margin-top: 200px;
+    margin-top: 40px;
     border-radius: 15px;
 }
+
 /* Formulaire à gauche  */
 #formulaireContact {
     flex: 2;
@@ -503,18 +560,20 @@ iframe {
     /* padding-bottom: 150px; */
     background-color: var(--couleur-secondaire);
 }
+
 #formulaireContact label {
     font-weight: 600;
     color: white;
     margin-bottom: 5px;
     display: block;
 }
+
 #formulaireContact input,
 #formulaireContact select,
 #formulaireContact textarea {
     width: 100%;
     padding: 12px 15px;
-    border: 1px solid #f5a623;
+    border: 1px solid var(--couleur-primaire);
     border-radius: 8px;
     margin-bottom: 25px;
     font-family: var(--police-corps);
@@ -525,32 +584,35 @@ iframe {
     height: 150px;
     resize: vertical;
 }
-    
+
 #formulaireContact button {
     width: 100%;
     padding: 14px;
     font-size: 1rem;
 }
+
 /* coordonnées Section */
 .coordonnees {
-   background-color: var(--couleur-secondaire); 
-   padding: 32px 24px;
-   border-radius: 15px;
-   max-width: 480px;
-   color: white;
-   height: 400px;
+    background-color: var(--couleur-secondaire);
+    padding: 32px 24px;
+    border-radius: 15px;
+    max-width: 480px;
+    color: white;
+    min-height: 400px;
 }
+
 .coordonnees h3 {
-   color: white;
-   font-size: 13px;
-   font-weight: 600;
-   letter-spacing: 0.12rem;
-   text-transform: uppercase;
-   margin-bottom: 28px;
-   padding-bottom: 16px;
-   border-bottom: 1px solid #2d3a52;
-   text-align: center;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.12rem;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #2d3a52;
+    text-align: center;
 }
+
 /* Chaque ligne de contact */
 .coordonnees p {
     display: flex;
@@ -558,18 +620,28 @@ iframe {
     gap: 20px;
     margin: 0 0 50px 0;
 }
+
 /* Icône dans un carré arrondi */
 .coordonnees p .icon-box {
     width: 52px;
     height: 52px;
     border-radius: 12px;
-    display: flex ;
+    display: flex;
     justify-content: center;
-    font-size: 22px;  
+    font-size: 22px;
 }
-.coordonnees p.email .icon-box  {background-color: #1e3a5f;}
-.coordonnees p.phone .icon-box  {background-color: #3b1a14;}
-.coordonnees p.address .icon-box {background-color: #2b1a4a;}
+
+.coordonnees p.email .icon-box {
+    background-color: #1e3a5f;
+}
+
+.coordonnees p.phone .icon-box {
+    background-color: #3b1a14;
+}
+
+.coordonnees p.address .icon-box {
+    background-color: #2b1a4a;
+}
 
 /* Bloc texte label + valeur */
 .coordonnees p .info {
@@ -577,6 +649,7 @@ iframe {
     flex-direction: column;
     gap: 4px;
 }
+
 .coordonnees p .label {
     font-size: 11px;
     font-weight: 600;
@@ -584,16 +657,19 @@ iframe {
     text-transform: uppercase;
     color: #7a8aa0;
 }
+
 .coordonnees p a {
     font-size: 17px;
     font-weight: 600;
     text-decoration: none;
     color: #fff;
 }
+
 /* Email en bleue  */
 .coordonnees p.email a {
     color: #4a9eff;
 }
+
 /* Téléphone en orange */
 .coordonnees p.phone a {
     color: #e8884a;
@@ -602,10 +678,12 @@ iframe {
 /* RESPONSIVE DESIGN - COMMIT 5 */
 /* TABLETTE (768px) */
 @media (max-width: 768px) {
+
     /* Navbar */
-    .navbar-bar img {
+    .navbar-brand img {
         height: 35px;
     }
+
     .navbar-nav {
         text-align: center;
     }
@@ -615,18 +693,27 @@ iframe {
         flex-direction: row;
         align-items: center;
     }
+    .hero {
+        padding: 60px;
+        height: auto;
+    }
+
     .hero-texte {
         text-align: center;
     }
+
     .hero-image img {
         width: 100%;
         max-width: 300px;
     }
-    #hero h1 {
+
+    .hero h1 {
         font-size: 2.5rem;
     }
-    #hero h2 {
+
+    .hero h2 {
         font-size: 1.2rem;
+        text-align: center;
     }
 
     /* Stats */
@@ -634,11 +721,12 @@ iframe {
         flex-direction: row;
         gap: 20px;
     }
-    
+
     /* Bento Grid */
     .bento-grid {
         grid-template-columns: 1fr;
     }
+
     .bento-large,
     .bento-item:nth-child(2),
     .bento-item:last-child {
@@ -652,8 +740,7 @@ iframe {
     }
 
     /* Catégories */
-    #categories .row{
-        display: grid;
+    .categories-grid {
         grid-template-columns: 1fr;
     }
 
@@ -661,10 +748,12 @@ iframe {
     .carousel {
         padding: 30px;
     }
+
     .temoignage img {
         width: 60px;
         height: 60px;
     }
+
     .temoignage h3 {
         font-size: 1rem;
     }
@@ -673,18 +762,13 @@ iframe {
     #cta {
         padding: 50px 20px;
     }
-    #cta h2{
+
+    #cta h2 {
         font-size: 1.5rem;
     }
+
     #cta p {
         font-size: 0.9rem;
-    }
-
-    /* Filtres */
-    .filtres {
-        padding: 5px 10px;
-        font-size: 0.7rem;
-        margin: 3px;
     }
 
     /* Cartes */
@@ -696,15 +780,19 @@ iframe {
     #plan-pro {
         transform: scale(1);
     }
+
     #tarifs .card {
-        margin-bottom: 20px 
-    } 
+        margin-bottom: 20px
+    }
+
     .prix {
         font-size: 1.5rem;
     }
+
     .badge {
         font-size: 0.75rem;
     }
+
     #tarifs ul li {
         font-size: 0.9rem;
         padding: 6px 0;
@@ -719,6 +807,7 @@ iframe {
     #histoire div {
         flex-direction: column;
     }
+
     #histoire img {
         width: 100%;
         height: auto;
@@ -729,22 +818,26 @@ iframe {
     #equipe {
         padding: 40px 20px;
     }
+
     #equipe .card {
         margin-bottom: 20px;
     }
+
     #equipe .card img {
         width: 80px;
         height: 80px;
     }
+
     #equipe .card h3 {
         font-size: 1rem;
     }
+
     #equipe .card p {
         font-size: 0.9rem;
     }
 
     /* Valeurs */
-    .valeur h3{
+    .valeur h3 {
         font-size: 1.2rem;
     }
 
@@ -757,17 +850,20 @@ iframe {
     #contact {
         padding-top: 100px;
     }
+
     .contact-wrapper {
         flex-direction: column;
     }
+
     .coordonnees {
         border-left: none;
-        border-top: 3px solid var(--couleur-primaire);
         padding-top: 30px;
     }
+
     .coordonnees h3 {
         font-size: 1.2rem;
     }
+
     .coordonnees p {
         font-size: 0.9rem;
     }
@@ -775,12 +871,14 @@ iframe {
     #formulaireContact {
         padding: 20px;
     }
+
     #formulaireContact input,
     #formulaireContact select,
     #formulaireContact textarea {
         padding: 10px;
         font-size: 0.9rem;
     }
+
     iframe {
         margin-top: 50px;
     }
@@ -789,367 +887,407 @@ iframe {
     footer .row {
         flex-direction: column;
     }
+
     footer .col-md-3 {
         margin-bottom: 20px;
     }
 
-}    
-    /* MOBILE (375px) */
-    @media (max-width: 375px) {
+}
 
-        /* Navbar */
-        .navbar-brand img {
-            height: 30px;
-        }
-        
-        .navbar-nav {
-            text-align: center;
-        }
-        /* Hero */
-        #hero {
-            padding: 100px 15px 60px;
-        }
-        #hero h1 {
-            font-size: 1.8rem;
-        }
-        #hero h2 {
-            font-size: 1rem;
-        }
+/* MOBILE (375px) */
+@media (max-width: 375px) {
 
-        /* Stats */
-        .stat span {
-            font-size: 2rem;
-        }
-
-        /* Bento-grid */
-        .bento-item {
-            padding: 20px;
-        }
-        .numero {
-            font-size: 2rem;
-        }
-        
-        /* Catégories */
-        .categories-grid {
-           grid-template-columns: 1fr;
-           gap: 15px;
-        }
-        .categorie {
-            padding: 40px 15px;
-        }
-
-        /* Carousel */
-        .carousel {
-            padding: 20px;
-        }
-
-        /* CTA */
-        #cta {
-            padding: 40px 15px;
-        }
-        #cta h2 {
-            font-size: 1.3rem;
-        }
-        #cta .btn {
-            width: 100%;
-        }
-
-        /* Filtres */
-        .filtres {
-            padding: 5px 10px;
-            font-size: 0.7rem;
-            margin: 3px;
-        }
-
-        /* Cartes */
-        .card {
-            padding: 10px;
-        }
-        .card img {
-            width: 50px;
-            height: 50px;
-        }
-
-        /* Tarifs */
-        .tarifs {
-            padding: 40px 15px;
-        }
-
-        .prix {
-            font-size: 1.3rem;
-        }
-        .badge {
-            font-size: 0.7rem;
-        } 
-
-        /* FAQ */
-        .accordion-button {
-            font-size: 0.8rem;
-            padding: 10px;
-        }
-        .accordion-body {
-            font-size: 0.85rem;
-            padding: 10px;
-        }
-
-        /* Histoire */
-        #histoire div {
-            padding: 20px;
-        }
-        #histoire img {
-            height: 200px;
-        }
-
-        /* Equipe */
-        #equipe {
-            padding: 30px 15px;
-        }
-        #equipe .card img {
-            width: 60px;
-            height: 60px;
-        }
-        #equipe .card h3 {
-            font-size: 0.9rem;
-        }
-        #equipe .card p {
-            font-size: 0.8rem;
-        }
-
-        /* Valeurs */
-        .valeur {
-            padding: 15px;
-        }
-        .valeur h3 {
-            font-size: 1rem;
-        }
-
-        /* Chiffres */
-        .chiffre span {
-            font-size: 2rem;
-        }
-        /* Formulaire */
-        #contact {
-            padding-top: 80px;
-        }
-        #formulaireContact label {
-            font-size: 0.85rem;
-        }
-        #formulaireContact input,
-        #formulaireContact select,
-        #formulaireContact textarea {
-            padding: 8px;
-            font-size: 0.85rem;
-            margin-bottom: 15px;
-        }
-        #formulaireContact button {
-            padding: 12px;
-            font-size: 0.9rem;
-        }
-        .coordonnees {
-            padding: 20px 0;
-        }
-        .coordonnees h3 {
-            font-size: 1rem;
-        }
-        .coordonnees p {
-            font-size: 0.8rem;
-        }
-
-        /* Iframe */
-        iframe {
-            height: 200px;
-            margin-top: 20px;
-        }
-
-        /* Footer */
-        footer {
-            padding: 20px 0;
-        }
-        footer h5 {
-            font-size: 1rem;
-        }
-
-    }
-    @media (max-width: 568px) {
-        .categories-grid {
-            grid-template-columns: 1fr;
-        }
+    /* Navbar */
+    .navbar-brand img {
+        height: 30px;
     }
 
-    
-
-    /* DESKTOP (1200px+) */
-    @media (min-width: 1200px) {
-        /* Navbar */
-        .navbar-brand img {
-            height: 60px;
-        }
-
-        /* Hero */
-        #hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-        }
-
-        /* Bento grid */
-        .bento-item {
-            padding: 40px;
-        }
-
-        /* Numéro */
-        .numero {
-            font-size: 3.5rem;
-        }
-
-        /* Catégorie */
-        .categories {
-            padding: 25px;
-        }
-
-        /* Carousel */
-        .temoignage img{
-            width: 100px;
-            height: 100px;
-        }
-
-        /* CTA */
-        #cta {
-            padding: 100px 20px;
-        }
-        #cta h2 {
-            font-size: 2.5rem;
-        }
-        #cta p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-        #cta .btn {
-            font-size: 1.1rem;
-            padding: 12px 30px;
-        }
-
-      /* Cartes */
-        .card img {
-            width: 100px;
-            height: 100px;
-        }
-
-        /* Tarifs */
-        #tarifs .row {
-            align-items: center;
-        }
-        #tarifs .card {
-            height: 100%;
-        }
-
-        /* FAQ */
-        .accordion-button {
-            font-size: 1.1rem;
-        } 
+    .navbar-nav {
+        text-align: center;
     }
 
-    /* Commit 6
+    /* Hero */
+    #hero {
+        padding: 100px 15px 60px;
+    }
+
+    #hero h1 {
+        font-size: 1.8rem;
+    }
+
+    #hero h2 {
+        font-size: 1rem;
+    }
+
+    /* Stats */
+    .stat span {
+        font-size: 2rem;
+    }
+
+    /* Bento-grid */
+    .bento-item {
+        padding: 20px;
+    }
+
+    .numero {
+        font-size: 2rem;
+    }
+
+    /* Catégories */
+    .categories-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categories {
+        padding: 40px 15px;
+    }
+
+    /* Carousel */
+    .carousel {
+        padding: 20px;
+    }
+
+    /* CTA */
+    #cta {
+        padding: 40px 15px;
+    }
+
+    #cta h2 {
+        font-size: 1.3rem;
+    }
+
+    #cta .btn {
+        width: 100%;
+    }
+
+    /* Filtres */
+    .filtre {
+        padding: 5px 10px;
+        font-size: 0.7rem;
+        margin: 3px;
+    }
+
+
+    /* Freelance mobile */
+    #freelances .row {
+        display: flex;
+        flex-direction: column;
+    }
+    #freelances .card {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Cartes */
+    .card {
+        padding: 10px;
+    }
+
+    .card img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Tarifs */
+    #tarifs {
+        padding: 40px 15px;
+    }
+
+    .prix {
+        font-size: 1.3rem;
+    }
+
+    .badge {
+        font-size: 0.7rem;
+    }
+
+    /* FAQ */
+    .accordion-button {
+        font-size: 0.8rem;
+        padding: 10px;
+    }
+
+    .accordion-body {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+
+    /* Histoire */
+    #histoire div {
+        padding: 20px;
+    }
+
+    #histoire img {
+        height: 200px;
+    }
+
+    /* Equipe */
+    #equipe {
+        padding: 30px 15px;
+    }
+
+    #equipe .card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    #equipe .card h3 {
+        font-size: 0.9rem;
+    }
+
+    #equipe .card p {
+        font-size: 0.8rem;
+    }
+
+    /* Valeurs */
+    .valeur {
+        padding: 15px;
+    }
+
+    .valeur h3 {
+        font-size: 1rem;
+    }
+
+    /* Chiffres */
+    .chiffre span {
+        font-size: 2rem;
+    }
+
+    /* Formulaire */
+    #contact {
+        padding-top: 80px;
+    }
+
+    #formulaireContact label {
+        font-size: 0.85rem;
+    }
+
+    #formulaireContact input,
+    #formulaireContact select,
+    #formulaireContact textarea {
+        padding: 8px;
+        font-size: 0.85rem;
+        margin-bottom: 15px;
+    }
+
+    #formulaireContact button {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+
+    .coordonnees {
+        padding: 20px 0;
+    }
+
+    .coordonnees h3 {
+        font-size: 1rem;
+    }
+
+    .coordonnees p {
+        font-size: 0.8rem;
+    }
+
+    /* Iframe */
+    iframe {
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 20px 0;
+    }
+
+    footer h5 {
+        font-size: 1rem;
+    }
+}
+
+/* DESKTOP (1200px+) */
+@media (min-width: 1200px) {
+
+    /* Navbar */
+    .navbar-brand img {
+        height: 60px;
+    }
+
+    /* Hero */
+    #hero {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Bento grid */
+    .bento-item {
+        padding: 40px;
+    }
+
+    /* Numéro */
+    .numero {
+        font-size: 3.5rem;
+    }
+
+    /* Catégorie */
+    .categories {
+        padding: 25px;
+    }
+
+    /* Carousel */
+    .temoignage img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* CTA */
+    #cta {
+        padding: 100px 20px;
+    }
+
+    #cta h2 {
+        font-size: 2.5rem;
+    }
+
+    #cta p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+
+    #cta .btn {
+        font-size: 1.1rem;
+        padding: 12px 30px;
+    }
+
+    /* Cartes */
+    .card img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* Tarifs */
+    #tarifs .row {
+        align-items: center;
+    }
+
+    #tarifs .card {
+        height: 100%;
+    }
+
+    /* FAQ */
+    .accordion-button {
+        font-size: 1.1rem;
+    }
+}
+
+/* Commit 6
     DARK MODE */
 
-    body.dark-mode {
-        background-color: #121212;
-        color: white;
-    }
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
 
-    body.dark-mode h1,
-    body.dark-mode h2,
-    body.dark-mode h3,
-    body.dark-mode P,
-    body.dark-mode li,
-    body.dark-mode div,
-    body.dark-mode label {
-        color: white;
-    }
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode label {
+    color: white;
+}
 
-    /* Conserver les couleurs des valeurs */
-    body.dark-mode .valeur h3 {
-        color: var(--couleur-primaire);
-    }
-    /* Conserver les couleurs des temoignages */
-    body.dark-mode .temoignage h3 {
-        color: var(--couleur-primaire);
-    }
-    body.dark-mode .card,
-    body.dark-mode .valeur,
-    body.dark-mode .coordonnees,
-    body.dark-mode #formulaireContact,
-    body.dark-mode #histoire div,
-    body.dark-mode .bento-item,
-    body.dark-mode .accordion-body {
-        background-color: #1f1f1f;
-    }
+/* Conserver les couleurs des valeurs */
+body.dark-mode .valeur h3 {
+    color: var(--couleur-primaire);
+}
 
-    body.dark-mode #histoire p {
-        color: white;
-    }
+/* Conserver les couleurs des temoignages */
+body.dark-mode .temoignage h3 {
+    color: var(--couleur-primaire);
+}
 
-    body.dark-mode #filtres,
-    body.dark-mode #histoire {
-        background-color: #181818;
-    }
+body.dark-mode .card,
+body.dark-mode .valeur,
+body.dark-mode .coordonnees,
+body.dark-mode #formulaireContact,
+body.dark-mode #histoire div,
+body.dark-mode .bento-item,
+body.dark-mode .accordion-body {
+    background-color: #1f1f1f;
+}
+body.dark-mode .accordion-body,
+body.dark-mode #histoire p {
+    color: white;
+}
 
-    /* NAVBAR DYNAMIQUE */
-    .navbar {
-        transition: all 0.3s ease;
-    }
-    .navbar-scroll {
-        background-color: rgba(26, 26, 46, 0.95) !important;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
+body.dark-mode #filtres,
+body.dark-mode #histoire {
+    background-color: #181818;
+}
 
-    /* RETOUR TOP */
+/* NAVBAR DYNAMIQUE */
+.navbar {
+    transition: all 0.3s ease;
+}
 
-    #btn-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        height: 50px;
-        border: none;
-        border-radius: 50%;
-        background-color: var(--couleur-primaire);
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-    }
-    #btn-top:hover {
-        transform: scale(1.1);
-    }
+.navbar-scroll {
+    background-color: rgba(26, 26, 46, 0.95) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 
-    /* COMMIT 7
+/* RETOUR TOP */
+
+#btn-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    height: 50px;
+    width: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--couleur-primaire);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 999;
+    transition: 0.3s ease;
+    display: none;
+}
+
+#btn-top:hover {
+    transform: scale(1.1);
+}
+
+/* COMMIT 7
     Fade In des sections */
 
-    .fade-in {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: all 0.8s ease;
-    }
-    .fade-in.visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 
-    /* COMMIT 8 */
-    .erreur {
-        color: red;
-        font-size: 0.9rem;
-        display: block;
-        margin-top: -15px;
-        margin-bottom: 10px;
-    }
+/* COMMIT 8 */
+.erreur {
+    color: red;
+    font-size: 0.9rem;
+    display: block;
+    margin-top: -15px;
+    margin-bottom: 10px;
+}
 
-    #messageSuccess {
-        color: lightgreen;
-        font-weight: bold;
-        text-align: center;
-        margin-top: 15px;
-    }
-
+#messageSuccess {
+    color: lightgreen;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
